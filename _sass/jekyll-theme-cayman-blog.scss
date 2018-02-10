@@ -397,7 +397,7 @@ a {
     }
 
     @include large {
-      padding: 0px 5px 0px 5px;
+        padding: 0px 10px 10px 10px;
     }
 
     @include medium {
@@ -406,7 +406,7 @@ a {
     }
 
     @include small {
-      padding: 0px 10px 10px 10px;
+      padding: 0px 5px 0px 5px;
     }
   }
 
@@ -465,7 +465,7 @@ a {
         }
 
         @include large {
-            padding: 0px 5px 0px 5px;
+            padding: 0px 10px 10px 10px;
         }
 
         @include medium {
@@ -474,7 +474,7 @@ a {
         }
 
         @include small {
-            padding: 0px 10px 10px 10px;
+            padding: 0px 5px 0px 5px;
         }
     }
 
