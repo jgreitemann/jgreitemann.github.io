@@ -26,6 +26,8 @@ twitter:
 github:
   owner_name:  jgreitemann
   owner_url:   "https://github.com/jgreitemann"
+telegram:
+  username: jgreitemann
 
 # Build settings
 markdown: kramdown
