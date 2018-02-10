@@ -30,6 +30,9 @@ telegram:
   username: jgreitemann
 lastfm:
   username: jgreitemann
+stackexchange:
+  userid: 3028048
+  username: jonas
 
 # Build settings
 markdown: kramdown
