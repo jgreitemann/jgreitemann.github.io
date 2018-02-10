@@ -33,6 +33,8 @@ lastfm:
 stackexchange:
   userid: 3028048
   username: jonas
+arxiv:
+  search_url: "https://arxiv.org/find/cond-mat/1/au:+Greitemann_J/0/1/0/all/0/1"
 
 # Build settings
 markdown: kramdown
