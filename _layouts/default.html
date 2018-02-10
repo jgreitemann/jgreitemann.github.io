@@ -86,9 +86,11 @@
 
       {{ content }}
 
+      {% if page.layout != 'home' %}
       <footer class="site-footer">
           {% include social-buttons.html %}
       </footer>
+      {% endif %}
     </section>
   </body>
 </html>
