@@ -105,15 +105,15 @@ a {
   background-size: cover;
 
   @include large {
-    padding: 5rem 6rem;
+    padding: 5rem 6rem 2rem;
   }
 
   @include medium {
-    padding: 3rem 4rem;
+    padding: 3.5rem 4rem 1.5rem;
   }
 
   @include small {
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem 0.5rem;
   }
 }
 
@@ -426,8 +426,8 @@ a {
     }
 
     @include large {
-      width: 28px;
-      height: 28px;
+        width: 36px;
+        height: 36px;
     }
 
     @include medium {
@@ -436,10 +436,78 @@ a {
     }
 
     @include small {
-      width: 36px;
-      height: 36px;
+      width: 28px;
+      height: 28px;
     }
 
   } // social-icons
+
+}
+
+.page-header {
+
+    @include large {
+    }
+
+    @include medium {
+    }
+
+    @include small {
+    }
+
+    .my-span-icon {
+
+        a {
+    	    text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+
+        @include large {
+            padding: 0px 5px 0px 5px;
+        }
+
+        @include medium {
+            //font-size: 1rem;
+            padding: 0px 10px 10px 10px;
+        }
+
+        @include small {
+            padding: 0px 10px 10px 10px;
+        }
+    }
+
+    .my-svg-icon {
+
+        color: $header-heading-color; // IE8
+        fill: $header-heading-color; // IE8
+        opacity: 0.7;
+        width: 24px;
+        height: 24px;
+
+        &:hover {
+            text-decoration: none;
+            opacity: 1.0;
+            transform: scale(1.25);
+            transition: color .5s, transform .2s ease-out
+        }
+
+        @include large {
+            width: 36px;
+            height: 36px;
+        }
+
+        @include medium {
+            width: 32px;
+            height: 32px;
+        }
+
+        @include small {
+            width: 28px;
+            height: 28px;
+        }
+
+    } // social-icons
 
 }
