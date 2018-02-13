@@ -6,6 +6,13 @@ layout: default
 
   {{ content }}
 
+  <h2>Recent Publications</h2>
+
+  {% assign pub_limit = 2 %}
+  {% include publications.html %}
+
+  <a class="more" href="./pub">More...</a>
+
   <h2>Latest Posts</h2>
 
   <div>&nbsp;</div>
