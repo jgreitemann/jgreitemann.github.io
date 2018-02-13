@@ -1,0 +1,40 @@
+{% assign pub_limit = pub_limit | default: 999 %}
+<dl class="references">
+    {% assign pubs = site.publications | sort: "arxiv" %}
+    {% for pub in pubs reversed %}
+        {% assign arxiv = pub.arxiv | default: pub.title %}
+        {% assign ref = pub.journal-ref | default: "ArXiV preprint" %}
+        <dt>
+            <span class="pub-index">[{{ forloop.rindex }}]</span>
+            {% if pub.doi %}
+                <a href="https://doi.org/{{ pub.doi }}">
+                    {{ ref }}
+                    {% if pub.year %}
+                        ({{ pub.year }})
+                    {% endif %}
+                </a>
+            {% else %}
+                {{ ref }}
+            {% endif %}
+            <a class="arxiv-link" href="https://arxiv.org/abs/{{ arxiv }}">
+                {{ arxiv }}
+            </a>
+        </dt>
+        {% if pub.authors or pub.fulltitle %}
+            <dd>
+                {% if pub.authors %}
+                    {{ pub.authors | array_to_sentence_string }}{% if pub.fulltitle %}:{% else %}.{% endif %}
+                {% endif %}
+                {% if pub.fulltitle %}
+                    <span class="pub-title">
+                        {{ pub.fulltitle }}.
+                    </span>
+                {% endif %}
+            </dd>
+        {% endif %}
+        {% assign pub_limit = pub_limit | minus: 1 %}
+        {% if pub_limit == 0 %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+</dl>

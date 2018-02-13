@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+
+.arxiv-link {
+    background-image: url("/assets/svg/arxiv_link.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: lighten($body-text-color, 25%);
+    color: #fff;
+    font-size: 75%;
+    border-radius: 0.35em;
+    padding: 0em 0.25em 0.1em 1.5em;
+    vertical-align: middle;
+    display: inline-block;
+
+    &:hover {
+        background-color: $section-headings-color;
+        text-decoration: none;
+        transition: background-color .3s ease-in-out;
+    }
+}
+
+.references dd {
+    margin-left: 3em;
+}
+
+.references dt > span.pub-index {
+    display: inline-block;
+    width: 3em;
+    padding-right: .25em;
+    text-align: right;
+}
+
+.pub-title {
+    font-style: italic;
+}

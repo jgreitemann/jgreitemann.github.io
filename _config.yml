@@ -18,6 +18,7 @@ email: jgreitemann@gmail.com
 description: "@jgreitemann"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jgreitemann.github.io" # the base hostname & protocol for your site
+
 twitter:
   username: jg424
 github:
@@ -32,6 +33,9 @@ stackexchange:
   username: jonas
 arxiv:
   search_url: "https://arxiv.org/find/cond-mat/1/au:+Greitemann_J/0/1/0/all/0/1"
+
+collections:
+  - publications
 
 # Build settings
 markdown: kramdown
