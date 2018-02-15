@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+#layers {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+#dummy {
+    margin-top: 57.14%
+}
+
+#canvas {
+    position: absolute;
+    border: 1px solid black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+input[type="text"] {
+    width: 4em;
+}
+
+#nu-slider {
+    transform: translateY(+30%);
+}
+
+#primary-green {
+    display: inline;
+}
+
+.toggled #primary-green {
+    display: none;
+}
+
+#primary-red {
+    display: none;
+}
+
+.toggled #primary-red {
+    display: inline;
+}

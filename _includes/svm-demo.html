@@ -1,0 +1,82 @@
+<script type="text/javascript" src="/assets/svm-demo/ui.js"></script>
+<script async type="text/javascript" src="/assets/svm-demo/svm_demo.js"></script>
+<div>
+    <div id="layers">
+        <div id="dummy" class="layer"></div>
+        <canvas id="canvas" class="layer"></canvas>
+    </div>
+    <div>
+        <div>
+            <button id="class-toggle">
+                <img id="primary-green" src="/assets/svg/green.svg" />
+                <img id="primary-red" src="/assets/svg/red.svg" />
+                Toggle
+            </button>
+            <button id="clear-button">Clear Points</button>
+        </div>
+        <div>
+            <script type="math/tex">\nu =</script>
+            <input type="text" id="nu-text" value="0.25" />
+            <input type="range" id="nu-slider" min="1" max="100" value="25" />
+        </div>
+        <div>
+            Kernel:
+            <select id="kernel-picker">
+                <option value="linear">Linear</option>
+                <option value="quadratic">Quadratic</option>
+                <option value="rbf">Radial Basis Functions</option>
+                <option value="sigmoid">Sigmoid</option>
+            </select>
+            <span id="linear-kernel-formula" class="ui-cell centered">
+                <script type="math/tex">
+                    K(\mathbf x,\mathbf y) = \mathbf x\cdot\mathbf y
+                </script>
+            </span>
+            <span id="quadratic-kernel-formula" class="ui-cell centered">
+                <script type="math/tex">
+                    K(\mathbf x,\mathbf y) = \left(\gamma\mathbf x\cdot\mathbf y+c_0\right)^2
+                </script>
+            </span>
+            <span id="rbf-kernel-formula" class="ui-cell centered">
+                <script type="math/tex">
+                    K(\mathbf x,\mathbf y) = \exp\left(-\gamma\|\mathbf x - \mathbf y\|^2\right)
+                </script>
+            </span>
+            <span id="sigmoid-kernel-formula" class="ui-cell centered">
+                <script type="math/tex">
+                    K(\mathbf x,\mathbf y) = \tanh\left(\gamma\mathbf x\cdot\mathbf y+c_0\right)
+                </script>
+            </span>
+        </div>
+        <div>
+            <script type="math/tex">
+             \gamma =
+            </script>
+            <input type="text" id="gamma-text" value="1.0" />
+            &nbsp;&nbsp;&nbsp;
+            <script type="math/tex">
+             c_0 =
+            </script>
+            <input type="text" id="c0-text" value="0.0" />
+        </div>
+        <div>
+            <label><input type="checkbox" id="SVcheckbox" />Highlight support vectors</label>
+        </div>
+        <div class="ui error" id="exception">
+            <span class="ui-cell">
+                <h3>Exception</h3>
+                <p id="exception-text">Upps, something went wrong...</p>
+            </span>
+        </div>
+        <div class="ui warning" id="two-class-warning">
+            <span class="ui-cell">
+                <h3>Hint</h3>
+                <p>
+                    Add points to each of the two classes by left- and
+                    right-clicking inside the canvas to trigger the computation
+                    of a SVM model.
+                </p>
+            </span>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@
 @import "variables";
 @import "blog";
 @import "publications";
+@import "svm-demo";
 
 @mixin large {
   @media screen and (min-width: #{$large-breakpoint}) {
