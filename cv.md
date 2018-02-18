@@ -7,6 +7,7 @@ permalink: /cv/
 order: 2
 ---
 
-This is the _Cayman Blog_ Jekyll theme. You can find out more info about customizing this theme, as well as basic usage documentation, and source code at: [cayman-blog](https://github.com/lorepirri/cayman-blog)
-
-You can find the source code for _Jekyll_ at [jekyll](https://github.com/jekyll/jekyll)
+* _2010_: Abitur, Städtisches Gymnasium Sundern
+* _2010-2013_: Bachelor studies in Physics, RWTH Aachen, Degree: B.Sc.
+* _2013-2015_: Master studies in Physics, RWTH Aachen, Degree: M.Sc.
+* _since 2015_: Graduate studies at the chair for Theoretical Nanophysics, LMU München, supervisor: Lode Pollet
