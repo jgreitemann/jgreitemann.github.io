@@ -435,7 +435,7 @@ window.onload = function () {
         redraw(false);
     };
 
-    kernel_picker.onclick = function (event) {
+    kernel_picker.onchange = function (event) {
         update_active_parameters();
         redraw(false);
     };
