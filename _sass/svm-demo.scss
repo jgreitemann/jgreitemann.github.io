@@ -41,3 +41,12 @@ input[type="text"] {
 .toggled #primary-red {
     display: inline;
 }
+
+#control-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#control-container div {
+    padding: 1em;
+}
