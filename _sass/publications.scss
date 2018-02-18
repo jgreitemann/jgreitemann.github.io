@@ -24,6 +24,10 @@
     margin-left: 2.5em;
 }
 
+.references dt {
+    white-space: nowrap;
+}
+
 .references dt > span.pub-index {
     display: inline-block;
     width: 2.5em;
