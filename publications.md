@@ -2,14 +2,14 @@
 layout: page
 title: Publications
 tagline: Journal articles, Theses, Slides, Posters
-permalink: /pub/
+permalink: /publications/
 order: 1
 ---
 
 Journal articles
 ----------------
 
-{% include publications.html %}
+{% include publications_abstract.html %}
 
 Theses
 ------

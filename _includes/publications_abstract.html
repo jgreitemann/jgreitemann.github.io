@@ -1,4 +1,5 @@
 {% assign pub_limit = pub_limit | default: 999 %}
+{% assign abstract_words = abstract_words | default: 100 %}
 <dl class="references">
     {% assign pubs = site.publications | sort: "arxiv" %}
     {% for pub in pubs reversed %}
@@ -22,13 +23,19 @@
         </dt>
         {% if pub.authors or pub.long-title %}
             <dd>
-                {% if pub.authors %}
-                    {{ pub.authors | array_to_sentence_string }}{% if pub.long-title %}:{% else %}.{% endif %}
-                {% endif %}
-                {% if pub.long-title %}
-                    <span class="pub-title">
-                        {{ pub.long-title }}.
-                    </span>
+                <p>
+                    {% if pub.long-title %}
+                        <span class="pub-title-bold">{{ pub.long-title }}</span><br>
+                    {% endif %}
+                    {% if pub.authors %}
+                        {{ pub.authors | array_to_sentence_string }}
+                    {% endif %}
+                </p>
+                {% if pub.abstract %}
+                    <p>
+                        {{ pub.abstract | truncatewords: abstract_words }}
+                        <a href="{{ pub.url }}">[More]</a>
+                    </p>
                 {% endif %}
             </dd>
         {% endif %}

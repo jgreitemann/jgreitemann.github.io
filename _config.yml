@@ -35,7 +35,8 @@ arxiv:
   search_url: "https://arxiv.org/find/cond-mat/1/au:+Greitemann_J/0/1/0/all/0/1"
 
 collections:
-  - publications
+  publications:
+    output: true
 
 # Build settings
 markdown: kramdown
