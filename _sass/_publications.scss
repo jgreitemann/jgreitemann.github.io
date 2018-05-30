@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+$ref-link-color: #aaa;
+
+ul#references {
+    margin-left: 0;
+}
+
+#references li {
+    clear: both;
+    list-style-type: none;
+    margin-bottom: 0.3em;
+}
+
+#references li > a {
+    display: inline;
+    color: $text-color;
+    font: 600 18px/1.7 $base-font-family;
+    white-space: nowrap;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+        color: $brand-color;
+    }
+}
+
+#references span.pub-index {
+    display: inline-block;
+    width: 2.25em;
+    padding-right: .25em;
+    text-align: right;
+}
+
+#references div.pub-byline {
+    margin-left: 2.5em;
+    font: normal 18px $base-font-family;
+    color: #aaa;
+    white-space: normal;
+}
+
+#references div.pub-abstract {
+    margin-left: 2.5em;
+    color: $text-color;
+    white-space: normal;
+
+    & > h4 {
+        margin-bottom: 0.2em;
+        line-height: 1.4;
+    }
+    & > h5 {
+        margin-bottom: 0.25em;
+    }
+    & > p {
+        font-weight: normal;
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+#references li > aside,
+#byline > aside {
+    float: right;
+    position: relative;
+}
+
+aside > a.ref-link {
+    fill: $ref-link-color;
+    font: 600 12px/1.6 $base-font-family;
+    color: $ref-link-color;
+    border-radius: 0.5em;
+    border: 1px solid $ref-link-color;
+    padding: 0em 0.35em 0em 0.35em;
+    vertical-align: middle;
+    display: inline-block;
+
+    svg {
+        vertical-align: middle;
+    }
+
+    &:hover {
+        fill: $brand-color;
+        color: $brand-color;
+        border-color: $brand-color;
+        text-decoration: none;
+        transition: background-color .3s ease-in-out;
+    }
+}
+
+#references li > a .fake-more {
+    float: right;
+    color: $brand-color;
+}
+
+#references li > a:hover .fake-more {
+    text-decoration: underline;
+}

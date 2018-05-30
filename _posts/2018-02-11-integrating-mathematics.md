@@ -4,6 +4,7 @@ title:  "Mathematics integration"
 date:   2018-02-11 00:08:00 +0100
 categories:
 math-enabled: true
+description: "Showing off mathematical formulae in blog posts."
 ---
 This post demos rendering mathematical equations on this blog using KaLaTeX. As an example, take this path integral representation of the single-particle propagator in the Fröhlich polaron:
 

@@ -1,0 +1,53 @@
+---
+layout: default
+title: 'home'
+order: 1
+---
+
+<!-- Brief intro -->
+<div class="header-intro">
+    {% capture intro %}{% include intro.md %}{% endcapture %}
+    {{ intro | markdownify }}
+</div>
+<hr />
+<!-- End intro -->
+
+<h1>recent publications</h1>
+
+{% assign pub_limit = 3 %}
+{% include publications.html %}
+
+<a class="more" href="./publications">more &rarr;</a>
+
+<hr />
+
+<h1>blog</h1>
+
+<div class="home">
+
+  <ul id="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">
+        <aside class="dates">{{ post.date | date: "%b %-d" }}</aside>
+        </a>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} <h2>{{ post.description }}</h2></a>
+        <!-- <p>
+        {{ post.content | truncatewords: 50 }}
+        </p> -->
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a class="pagination-link" href="{{ paginator.previous_page_path }}" class="previous"><span class="arrow">&larr;</span> Previous</a>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a class="pagination-link" href="{{ paginator.next_page_path }}" class="next">Next <span class="arrow">&rarr;</span></a>
+    {% endif %}
+  </div>
+
+  <a class="more" href="./blog">more &rarr;</a>
+
+</div>

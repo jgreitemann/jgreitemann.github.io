@@ -2,11 +2,40 @@
 layout: default
 ---
 
+{% assign page-title = page.long-title | default: page.title | default: site.title | escape %}
+<h1>{{ page-title }}</h1>
+
+<h4 id="byline">
+    {% if page.authors %}
+    {{ page.authors | array_to_sentence_string }}
+    <br />
+    {% endif %}
+    {% if page.journal-ref %}
+    published as {{ page.journal-ref }}
+    {% else %}
+    preprint
+    {% endif %}
+    <aside>
+        {% if page.doi %}
+        <a class="ref-link" href="https://doi.org/{{ page.doi }}">
+            DOI
+        </a>
+        {% endif %}
+        {% assign arxiv = page.arxiv | default: page.title %}
+        <a class="ref-link" href="https://arxiv.org/abs/{{ arxiv }}">
+            {% include arxiv_icon.svg %}
+            {{ arxiv }}
+        </a>
+    </aside>
+</h4>
+
 <h2>Abstract</h2>
 
 <p>
     {{ page.abstract }}
 </p>
+
+<hr />
 
 <div>
     {{ content }}

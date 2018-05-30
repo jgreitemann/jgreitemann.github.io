@@ -1,47 +1,49 @@
 {% assign pub_limit = pub_limit | default: 999 %}
 {% assign abstract_words = abstract_words | default: 100 %}
-<dl class="references">
+<ul id="references">
     {% assign pubs = site.publications | sort: "arxiv" %}
     {% for pub in pubs reversed %}
-        {% assign arxiv = pub.arxiv | default: pub.title %}
-        {% assign ref = pub.journal-ref | default: "ArXiV preprint" %}
-        <dt>
-            <span class="pub-index">[{{ forloop.rindex }}]</span>
+    {% assign arxiv = pub.arxiv | default: pub.title %}
+    {% assign ref = pub.journal-ref | default: "preprint" %}
+    <li>
+        <aside>
             {% if pub.doi %}
-                <a href="https://doi.org/{{ pub.doi }}">
-                    {{ ref }}
-                    {% if pub.year %}
-                        ({{ pub.year }})
-                    {% endif %}
-                </a>
-            {% else %}
-                {{ ref }}
+            <a class="ref-link" href="https://doi.org/{{ pub.doi }}">
+                DOI
+            </a>
             {% endif %}
-            <a class="arxiv-link" href="https://arxiv.org/abs/{{ arxiv }}">
+            <a class="ref-link" href="https://arxiv.org/abs/{{ arxiv }}">
+                {% include arxiv_icon.svg %}
                 {{ arxiv }}
             </a>
-        </dt>
-        {% if pub.authors or pub.long-title %}
-            <dd>
-                <p>
-                    {% if pub.long-title %}
-                        <span class="pub-title-bold">{{ pub.long-title }}</span><br>
-                    {% endif %}
-                    {% if pub.authors %}
-                        {{ pub.authors | array_to_sentence_string }}
-                    {% endif %}
-                </p>
-                {% if pub.abstract %}
-                    <p>
-                        {{ pub.abstract | truncatewords: abstract_words }}
-                        <a href="{{ pub.url }}">[More]</a>
-                    </p>
+        </aside>
+        <a href="{{ pub.url }}">
+            <span class="pub-index">[{{ forloop.rindex }}]</span>
+            {{ ref }}
+            {% if pub.year %}
+            ({{ pub.year }})
+            {% endif %}
+            {% if pub.authors or pub.long-title %}
+            <div class="pub-abstract">
+                {% if pub.long-title %}
+                <h4>{{ pub.long-title }}</h4>
                 {% endif %}
-            </dd>
-        {% endif %}
-        {% assign pub_limit = pub_limit | minus: 1 %}
-        {% if pub_limit == 0 %}
+                {% if pub.authors %}
+                <h5>{{ pub.authors | array_to_sentence_string }}</h5>
+                {% endif %}
+                {% if pub.abstract %}
+                <p>
+                    {{ pub.abstract | truncatewords: abstract_words }}
+                    <span class="fake-more">more &rarr;</span>
+                </p>
+                {% endif %}
+            </div>
+            {% endif %}
+            {% assign pub_limit = pub_limit | minus: 1 %}
+            {% if pub_limit == 0 %}
             {% break %}
-        {% endif %}
+            {% endif %}
+        </a>
+    </li>
     {% endfor %}
-</dl>
+</ul>

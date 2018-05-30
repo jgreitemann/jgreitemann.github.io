@@ -1,40 +1,44 @@
 {% assign pub_limit = pub_limit | default: 999 %}
-<dl class="references">
+<ul id="references">
     {% assign pubs = site.publications | sort: "arxiv" %}
     {% for pub in pubs reversed %}
-        {% assign arxiv = pub.arxiv | default: pub.title %}
-        {% assign ref = pub.journal-ref | default: "ArXiV preprint" %}
-        <dt>
-            <span class="pub-index">[{{ forloop.rindex }}]</span>
+    {% assign arxiv = pub.arxiv | default: pub.title %}
+    {% assign ref = pub.journal-ref | default: "ArXiV preprint" %}
+    <li>
+        <aside>
             {% if pub.doi %}
-                <a href="https://doi.org/{{ pub.doi }}">
-                    {{ ref }}
-                    {% if pub.year %}
-                        ({{ pub.year }})
-                    {% endif %}
-                </a>
-            {% else %}
-                {{ ref }}
+            <a class="ref-link" href="https://doi.org/{{ pub.doi }}">
+                DOI
+            </a>
             {% endif %}
-            <a class="arxiv-link" href="https://arxiv.org/abs/{{ arxiv }}">
+            <a class="ref-link" href="https://arxiv.org/abs/{{ arxiv }}">
+                {% include arxiv_icon.svg %}
                 {{ arxiv }}
             </a>
-        </dt>
-        {% if pub.authors or pub.long-title %}
-            <dd>
+        </aside>
+        <a href="{{ pub.url }}">
+            <span class="pub-index">[{{ forloop.rindex }}]</span>
+            {{ ref }}
+            {% if pub.year %}
+            ({{ pub.year }})
+            {% endif %}
+            {% if pub.authors or pub.long-title %}
+            <div class="pub-byline">
                 {% if pub.authors %}
-                    {{ pub.authors | array_to_sentence_string }}{% if pub.long-title %}:{% else %}.{% endif %}
+                {{ pub.authors | array_to_sentence_string }}{% if pub.long-title %}:{% else %}.{% endif %}
                 {% endif %}
                 {% if pub.long-title %}
-                    <span class="pub-title">
-                        {{ pub.long-title }}.
-                    </span>
+                <em>
+                    {{ pub.long-title }}.
+                </em>
                 {% endif %}
-            </dd>
-        {% endif %}
-        {% assign pub_limit = pub_limit | minus: 1 %}
-        {% if pub_limit == 0 %}
+            </div>
+            {% endif %}
+            {% assign pub_limit = pub_limit | minus: 1 %}
+            {% if pub_limit == 0 %}
             {% break %}
-        {% endif %}
+            {% endif %}
+        </a>
+    </li>
     {% endfor %}
-</dl>
+</ul>
