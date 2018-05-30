@@ -29,7 +29,7 @@ collections:
 # Build settings
 markdown: kramdown
 permalink: ":title/"
-highlighter: pygments
+highlighter: rouge
 kramdown:
   math_engine: mathjax
 
