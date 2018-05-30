@@ -1,6 +1,6 @@
 # Site settings
 description: > # this means to ignore newlines until "baseurl:"
-  fffabs &copy 2015 - go create!
+    Jonas Greitemann
 title: Jonas Greitemann
 email: jgreitemann@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog

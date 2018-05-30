@@ -7,12 +7,12 @@
   {% assign page-title = page.long-title | default: page.title | default: site.title | escape %}
 
   <title>{{ page-title }}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_newlines }}{% endif %}">
 
   {% if site.gems contains "jekyll-seo-tag" %}
     <!-- jekyll-seo-tag -->
   {% else %}
-    {% include social-metatags.html %}
+  {% include social-metatags.html %}
   {% endif %}
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
