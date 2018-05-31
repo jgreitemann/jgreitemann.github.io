@@ -150,6 +150,7 @@ $social-button-color: #fff;
     margin: 19px 15px;
 
     & a {
+        text-decoration: none;
         & svg {
             fill: $social-button-color;
             opacity: 0.7;
