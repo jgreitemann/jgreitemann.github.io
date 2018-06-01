@@ -22,13 +22,16 @@ ul#references {
     &:hover {
         color: $brand-color;
     }
-}
 
-#references span.pub-index {
-    display: inline-block;
-    width: 2.25em;
-    padding-right: .25em;
-    text-align: right;
+    & > span {
+        display: inline-block;
+    }
+
+    & > span.pub-index {
+        width: 2.25em;
+        padding-right: .25em;
+        text-align: right;
+    }
 }
 
 #references div.pub-byline {

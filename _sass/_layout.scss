@@ -388,6 +388,7 @@ span.arrow {
 ul.anchors {
     float: right;
     position: relative;
+    margin: 0px;
 
     & > li {
         display: inline-block;
@@ -397,7 +398,7 @@ ul.anchors {
                 content: '\00b7';
                 margin-right: 0.3em;
             }
-            
+
         }
     }
 }

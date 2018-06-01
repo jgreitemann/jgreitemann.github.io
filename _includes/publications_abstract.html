@@ -19,10 +19,12 @@
         </aside>
         <a href="{{ pub.url }}">
             <span class="pub-index">[{{ forloop.rindex }}]</span>
-            {{ ref }}
-            {% if pub.year %}
-            ({{ pub.year }})
-            {% endif %}
+            <span>
+                {{ ref }}
+                {% if pub.year %}
+                ({{ pub.year }})
+                {% endif %}
+            </span>
             {% if pub.authors or pub.long-title %}
             <div class="pub-abstract">
                 {% if pub.long-title %}
