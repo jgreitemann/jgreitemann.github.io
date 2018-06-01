@@ -18,7 +18,7 @@
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 64px;
+    height: $header-height;
     background: #3366ff;
     background-image: -moz-linear-gradient(right top, $from 0%, $to 100%);
     background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, $from), color-stop(1, $to));
@@ -121,39 +121,51 @@ a .site-title {
 nav.site-nav {
     float: left;
     height: 100%;
-    margin: 16px 15px;
+    margin: 0px;
 
     .page-link {
+        height: $header-height;
+        line-height: $header-height;
         color: #fff;
         font-size: 14px;
         font-weight: 600;
+        margin: 0px;
+        text-decoration: none;
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
-            margin-left: 10px;
+            margin-left: 20px;
+            @include media-query($on-laptop) {
+                margin-left: 10px;
+            }
         }
-    }
 
-    a.page-link {
-        text-decoration: none;
-        &.selected {
+        &.selected > span {
             border-bottom: 2px solid #fff;
         }
     }
 }
 
-$social-button-color: #fff;
-
 #social-buttons {
     float: right;
     height: 100%;
-    margin: 19px 15px;
+    margin-top: -webkit-calc((#{$header-height} - #{$social-button-size})/2);
+    margin-top:         calc((#{$header-height} - #{$social-button-size})/2);
+    margin-bottom: -webkit-calc((#{$header-height} - #{$social-button-size})/2);
+    margin-bottom:         calc((#{$header-height} - #{$social-button-size})/2);
+    margin-left: 6px;
+    margin-right: 0px;
 
     & a {
+        display: inline-block;
+        width: $social-button-size;
+        height: $social-button-size;
         text-decoration: none;
         & svg {
             fill: $social-button-color;
             opacity: 0.7;
+            width: $social-button-size;
+            height: $social-button-size;
         }
         &:hover svg {
             opacity: 1.0;
