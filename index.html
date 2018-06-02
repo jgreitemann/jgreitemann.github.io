@@ -18,12 +18,12 @@ order: 1
 
 {% include publications.html limit=3 %}
 
-<a class="more" href="./publications">more &rarr;</a>
+<a class="more" href="{{ site.baseurl }}{% link publications.html %}">more &rarr;</a>
 <hr />
 
 <h1>recent blog posts</h1>
 
 {% include post_list.html limit=5 %}
 
-<a class="more" href="./blog">more &rarr;</a>
+<a class="more" href="{{ site.baseurl }}{% link blog/index.html %}">more &rarr;</a>
 <hr />
