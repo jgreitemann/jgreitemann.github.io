@@ -5,6 +5,7 @@ $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
 
 $spacing-unit:     30px;
+$button-icon-size: 18px;
 
 $text-color:       #000;
 $background-color: #fff;
@@ -13,13 +14,13 @@ $brand-color:      #9f54ad;
 
 $grey-color:       #aaa;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 15%);
+$grey-color-dark:  darken($grey-color, 25%);
 
 $social-button-color: #fff;
 $social-button-size: 25px;
 
 $ref-link-color:   $grey-color;
-$ext-link-color:   $grey-color-dark;
+$ext-link-color:   darken($grey-color, 10%);
 
 $header-height: 64px;
 

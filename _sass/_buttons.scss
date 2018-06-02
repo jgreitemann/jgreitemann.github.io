@@ -8,45 +8,67 @@
     border-radius: 0.3em;
     border: 1px solid $ext-link-color;
     margin: 3px;
-    padding: 0.15em 0.35em 0em 0.35em;
+    padding: 0.15em 0.35em 0em calc(#{$button-icon-size} + 0.5em);
     vertical-align: middle;
-    background-repeat: no-repeat;
-    background-position: 0.25em center;
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+
+    &::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: 0.25em center;
+        background-size: auto $button-icon-size;
+        z-index: -1;
+
+        filter: grayscale(1) brightness(1.2);
+        -webkit-filter: grayscale(1) brightness(1.2);
+    }
 
     &:hover {
         fill: $brand-color;
         color: $brand-color;
         border-color: $brand-color;
         text-decoration: none;
-        filter: none;
-        -webkit-filter: grayscale(0);
         transition: all .3s ease-in-out;
+
+        &::before {
+            filter: none;
+            -webkit-filter: grayscale(0);
+            transition: all .3s ease-in-out;
+        }
     }
 
 }
 
 a.gitlab {
     @extend %ext-link;
-    background-image: url('/assets/svg/gitlab.svg');
-    padding-left: calc(25px + 0.5em)
+    &::before {
+        background-image: url('/assets/svg/gitlab.svg');
+    }
 }
 
 a.github {
     @extend %ext-link;
-    background-image: url('/assets/svg/github.svg');
-    padding-left: calc(20px + 0.5em)
+    &::before {
+        background-image: url('/assets/svg/github.svg');
+    }
 }
 
 a.download {
     @extend %ext-link;
-    background-image: url('/assets/svg/download.svg');
-    padding-left: calc(22px + 0.5em)
+    &::before {
+        background-image: url('/assets/svg/download.svg');
+    }
 }
 
 a.button {
     @extend %ext-link;
+    padding-left: 0.35em;
 }
 
 p.centered {
