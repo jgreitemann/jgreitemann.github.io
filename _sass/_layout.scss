@@ -4,10 +4,10 @@
 
 .header-intro {
     font-size: 18px;
-    color: #aaa;
+    color: $grey-color;
 }
 .header-intro a, .header-intro a:visited {
-    color: #aaa;
+    color: $grey-color;
 }
 .header-intro a:hover {
     color: $brand-color;
@@ -263,7 +263,7 @@ Post List
 
 #post-list h2 {
     font: normal 19px/1.5em $base-font-family;
-    color: #aaa;
+    color: $grey-color;
     max-width: 400px;
     margin-top: 2px;
 }
@@ -277,7 +277,7 @@ Post List
     position: relative;
     top: 1px;
     font: 300 17px/1.8 $base-font-family;
-    color: #bbb;
+    color: $grey-color;
 }
 
 #post-list-footer {
@@ -401,4 +401,10 @@ ul.anchors {
 
         }
     }
+}
+
+.centered {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+%ext-link {
+    display: inline-block;
+    fill: $ext-link-color;
+    font: 600 18px/1.8 $base-font-family;
+    color: $ext-link-color;
+    border-radius: 0.3em;
+    border: 1px solid $ext-link-color;
+    margin: 3px;
+    padding: 0.15em 0.35em 0em 0.35em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 0.25em center;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+
+    &:hover {
+        fill: $brand-color;
+        color: $brand-color;
+        border-color: $brand-color;
+        text-decoration: none;
+        filter: none;
+        -webkit-filter: grayscale(0);
+        transition: all .3s ease-in-out;
+    }
+
+}
+
+a.gitlab {
+    @extend %ext-link;
+    background-image: url('/assets/svg/gitlab.svg');
+    padding-left: calc(25px + 0.5em)
+}
+
+a.github {
+    @extend %ext-link;
+    background-image: url('/assets/svg/github.svg');
+    padding-left: calc(20px + 0.5em)
+}
+
+a.download {
+    @extend %ext-link;
+    background-image: url('/assets/svg/download.svg');
+    padding-left: calc(22px + 0.5em)
+}
+
+a.button {
+    @extend %ext-link;
+}
+
+p.centered {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

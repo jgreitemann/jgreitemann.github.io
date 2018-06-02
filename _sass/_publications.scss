@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-$ref-link-color: #aaa;
-
 ul#references {
     margin-left: 0;
 }
@@ -37,7 +35,7 @@ ul#references {
 #references div.pub-byline {
     margin-left: 2.5em;
     font: normal 18px $base-font-family;
-    color: #aaa;
+    color: $grey-color;
     white-space: normal;
 }
 
@@ -86,7 +84,7 @@ aside > a.ref-link {
         color: $brand-color;
         border-color: $brand-color;
         text-decoration: none;
-        transition: background-color .3s ease-in-out;
+        transition: all .3s ease-in-out;
     }
 }
 

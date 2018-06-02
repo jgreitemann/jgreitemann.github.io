@@ -1,0 +1,45 @@
+
+$base-font-family: "Fakt", Helvetica, Arial, sans-serif;
+$base-font-size:   19px/1;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.6;
+
+$spacing-unit:     30px;
+
+$text-color:       #000;
+$background-color: #fff;
+// $brand-color:      #F26452;
+$brand-color:      #9f54ad;
+
+$grey-color:       #aaa;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 15%);
+
+$social-button-color: #fff;
+$social-button-size: 25px;
+
+$ref-link-color:   $grey-color;
+$ext-link-color:   $grey-color-dark;
+
+$header-height: 64px;
+
+// Width of the content area
+$content-width:    700px;
+
+$on-palm:          600px;
+$on-laptop:        700px;
+
+// Gradient colours
+// $from:  #AD76F2;
+// $to:    #FD3F4F;
+
+// 3BD8D5
+// FD3F4F
+
+// $from:  #ff2299;
+// $to:    #3366ff;
+
+// $from:  #F88E25;
+// $to:    #F3286D;
+$from:  #1d81a2;
+$to:    #7e4aa2;

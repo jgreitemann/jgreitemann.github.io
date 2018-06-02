@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import "variables";
+
+svg {
+    fill: $brand-color;
+    .darker {
+        fill: darken($brand-color, 15%);
+    }
+    .lighter {
+        fill: lighten($brand-color, 15%);
+    }
+}
