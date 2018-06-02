@@ -1,0 +1,42 @@
+---
+layout: default
+title: blog
+order: 6
+math-enabled: true
+---
+
+<h1>blog</h1>
+
+{% for post in paginator.posts %}
+<div class="post">
+
+    <header class="post-header">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            <h1 class="post-title">{{ post.title }}</h1>
+            <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+        </a>
+    </header>
+
+    <article class="post-content">
+        {{ post.content }}
+    </article>
+
+    <hr />
+</div>
+{% endfor %}
+
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <a class="pagination-link" href="{{ paginator.previous_page_path }}" class="previous"><span class="arrow">&larr;</span> Previous</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+    <span class="pagination-link">
+        {{ paginator.page }} / {{ paginator.total_pages }}
+    </span>
+    {% if paginator.next_page %}
+    <a class="pagination-link next" href="{{ paginator.next_page_path }}" class="next">Next <span class="arrow">&rarr;</span></a>
+    {% else %}
+    <span></span>
+    {% endif %}
+</div>

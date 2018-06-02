@@ -1,0 +1,15 @@
+{% assign post_limit = include.limit | default: 999 %}
+<ul class="post-list">
+{% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">
+    <aside class="dates">{{ post.date | date: "%b %-d" }}</aside>
+    </a>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} <h2>{{ post.description }}</h2></a>
+  </li>
+  {% assign post_limit = post_limit | minus: 1 %}
+  {% if post_limit == 0 %}
+  {% break %}
+  {% endif %}
+{% endfor %}
+</ul>

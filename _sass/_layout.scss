@@ -211,7 +211,7 @@ nav.site-nav {
     font-size: 20px;
 }
 
-#post-list {
+.post-list {
     margin-left: 0;
     list-style: none;
 
@@ -221,13 +221,13 @@ nav.site-nav {
 }
 
 a,
-#post-list a:hover,
-#post-list li:hover .dates {
+.post-list a:hover,
+.post-list li:hover .dates {
     text-decoration: none;
     color: $brand-color;
 }
 
-#post-list a {
+.post-list a {
     -webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;
     -ms-transition: all 0.15s ease;
@@ -238,30 +238,30 @@ a,
 /*=========================================
 Post List
 =========================================== */
-#post-list,#archive-list {
+.post-list,#archive-list {
     margin-top: 50px;
 }
 
-#post-list li,#archive-list li {
+.post-list li,#archive-list li {
     list-style-type: none;
 }
 
-#post-list li:last-child {
+.post-list li:last-child {
     margin-bottom: 0;
 }
 
-#post-list li+li {
+.post-list li+li {
     padding-top: 20px;
     border-top: 1px solid #DFE1E4;
 }
 
-#post-list a {
+.post-list a {
     color: #333;
     display: block;
     font: 600 21px/1.7 $base-font-family;
 }
 
-#post-list h2 {
+.post-list h2 {
     font: normal 19px/1.5em $base-font-family;
     color: $grey-color;
     max-width: 400px;
@@ -272,7 +272,7 @@ Post List
     padding-top: 10px;
 }
 
-#post-list .dates {
+.post-list .dates {
     float: right;
     position: relative;
     top: 1px;
@@ -280,7 +280,7 @@ Post List
     color: $grey-color;
 }
 
-#post-list-footer {
+.post-list-footer {
     border-top: 1px solid #DFE1E4;
     margin-top: 20px;
     padding-top: 100px;
@@ -303,6 +303,18 @@ Post List
  */
 .post-header {
     margin-bottom: $spacing-unit;
+
+    & > a {
+        display: block;
+
+        &:hover {
+            text-decoration: none;
+
+            .post-title {
+                color: $brand-color;
+            }
+        }
+    }
 }
 
 .post-title {
@@ -357,9 +369,19 @@ Post List
 
 // PAGINATION
 .pagination {
-    border-top: 1px solid #eee;
+    border-top: 1px solid $grey-color-light;
     margin-top: 50px;
     padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    & > * {
+        min-width: 25%;
+    }
+    & > span {
+        text-align: center;
+    }
 }
 
 .pagination-link {
@@ -367,8 +389,11 @@ Post List
     font-size: 13px;
     font-weight: bold;
     border-radius: 4px;
-    padding: 7px 18px 6px;
-    box-shadow: 0 0 0 1px hsla(5, 84%, 64%, 1);
+    padding: 0.5em;
+    white-space: nowrap;
+    &.next {
+        text-align: right;
+    }
 }
 
 span.arrow {

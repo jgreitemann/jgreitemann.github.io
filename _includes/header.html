@@ -4,7 +4,7 @@
         <!-- Site navigation -->
         <nav class="site-nav">
             <div class="trigger">
-                {% assign default_paths = site.pages | sort:"order" | map: "path" %}
+                {% assign default_paths = site.pages | sort:"order" | uniq:"order" | map: "path" %}
                 {% assign page_paths = site.header_pages | default: default_paths %}
                 {% for path in page_paths %}
                 {% assign entry = site.pages | where: "path", path | first %}

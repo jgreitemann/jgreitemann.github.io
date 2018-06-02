@@ -1,4 +1,4 @@
-{% assign pub_limit = pub_limit | default: 999 %}
+{% assign pub_limit = include.limit | default: 999 %}
 {% assign abstract_words = abstract_words | default: 100 %}
 <ul id="references">
     {% assign pubs = site.publications | sort: "arxiv" %}
