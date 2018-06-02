@@ -3,7 +3,7 @@
     {% assign pubs = site.publications | sort: "arxiv" %}
     {% for pub in pubs reversed %}
     {% assign arxiv = pub.arxiv | default: pub.title %}
-    {% assign ref = pub.journal-ref | default: "ArXiV preprint" %}
+    {% assign ref = pub.journal-ref | default: "preprint" %}
     <li>
         <aside>
             {% if pub.doi %}
