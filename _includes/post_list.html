@@ -1,6 +1,12 @@
 {% assign post_limit = include.limit | default: 999 %}
 <ul class="post-list">
 {% for post in site.posts %}
+  {% if include.tag %}
+  {% if post.tags contains include.tag %}
+  {% else %}
+  {% continue %}
+  {% endif %}
+  {% endif %}
   <li>
     <a href="{{ post.url | prepend: site.baseurl }}">
     <aside class="dates">{{ post.date | date: "%b %-d" }}</aside>

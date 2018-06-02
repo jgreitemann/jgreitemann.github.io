@@ -2,7 +2,9 @@
 layout: post
 title:  "Mathematics integration"
 date:   2018-02-11 00:08:00 +0100
-categories:
+tags:
+- jekyll
+- latex
 math-enabled: true
 description: "Showing off mathematical formulae in blog posts."
 ---

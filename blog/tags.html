@@ -1,0 +1,18 @@
+---
+layout: default
+title: tags
+---
+
+<h1>tags</h1>
+
+{% for post in site.posts %}
+{% assign all_tags = all_tags | concat: post.tags | uniq %}
+{% endfor %}
+{% assign all_tags = all_tags | sort %}
+
+<ul>
+    {% for tag in all_tags %}
+    <li id="{{ tag }}">{{ tag }}</li>
+    {% include post_list.html tag=tag %}
+    {% endfor %}
+</ul>
