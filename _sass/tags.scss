@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+ul.tags-list {
+    list-style: none;
+    color: $grey-color;
+    margin: 0;
+    & > li {
+        display: inline-block;
+        margin: 0.1em;
+        &:not(:last-child)::after {
+            content: ',';
+        }
+    }
+    &::before {
+        content: 'tags:';
+    }
+}
+
+$tag-hole-size: 0.45em;
+$tag-left-pad: 1.2em;
+$tag-right-pad: 1.3em;
+$tag-height: 1.8em;
+$tag-baseline-shift: 0.1em;
+$tag-border-frac: 0.7;
+
+.tag, .tag:visited {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    padding: $tag-baseline-shift calc(#{$tag-right-pad}*(1 - #{$tag-border-frac})) 0 $tag-left-pad;
+    margin-right: calc(#{$tag-right-pad}*#{$tag-border-frac});
+    background-color: $grey-color-light;
+    color:            $grey-color-dark;
+    border-radius: 0.3em 0 0 0.3em;
+    height: $tag-height;
+    line-height: calc(#{$tag-height} - #{$tag-baseline-shift});
+    font-weight: 300;
+    font-size: 80%;
+    &:hover {
+        text-decoration: none;
+        background-color: $brand-color;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        &::before {
+            box-shadow: inset 0 1.5px darken($brand-color, 15%);
+            transition: all 0.3s ease-in-out;
+        }
+        &::after {
+            border-left-color: $brand-color;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        left: calc((#{$tag-left-pad} - #{$tag-hole-size})/1.8);
+        top:  calc((#{$tag-height} - #{$tag-hole-size})/2);
+        width:  $tag-hole-size;
+        height: $tag-hole-size;
+        background-color: #fff;
+        box-shadow: inset 0 1.5px $grey-color;
+        border-radius: $tag-hole-size;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: calc(1px - #{$tag-right-pad}*#{$tag-border-frac});
+        background: #fff;
+        border-radius: 0px;
+        border-bottom: calc(#{$tag-height}/2.0) solid #f000;
+        border-top:    calc(#{$tag-height}/2.0) solid #f000;
+        border-left:   calc(#{$tag-right-pad}*#{$tag-border-frac}) solid $grey-color-light;
+    }
+}
