@@ -7,6 +7,7 @@ ul.tags-list {
     & > li {
         display: inline-block;
         margin: 0.1em;
+        vertical-align: middle;
         &:not(:last-child)::after {
             content: ',';
         }
@@ -21,14 +22,14 @@ ul.tags-list {
     }
 }
 
-$tag-hole-size: 0.45em;
+$tag-hole-size: 0.4em;
 $tag-left-pad: 1.2em;
-$tag-right-pad: 1.3em;
-$tag-height: 1.8em;
-$tag-baseline-shift: 0.1em;
+$tag-right-pad: 1em;
+$tag-height: 1.4em;
+$tag-baseline-shift: 0.0em;
 $tag-border-frac: 0.7;
 
-.tag, .tag:visited {
+.tag, a.tag:visited {
     display: inline-block;
     position: relative;
     white-space: nowrap;
@@ -39,21 +40,9 @@ $tag-border-frac: 0.7;
     border-radius: 0.3em 0 0 0.3em;
     height: $tag-height;
     line-height: calc(#{$tag-height} - #{$tag-baseline-shift});
-    font-weight: 300;
-    font-size: 80%;
-    &:hover {
-        text-decoration: none;
-        background-color: $brand-color;
-        color: white;
-        transition: all 0.3s ease-in-out;
-        &::before {
-            box-shadow: inset 0 1.5px darken($brand-color, 15%);
-            transition: all 0.3s ease-in-out;
-        }
-        &::after {
-            border-left-color: $brand-color;
-            transition: all 0.3s ease-in-out;
-        }
+    & > span {
+        font-weight: 300;
+        font-size: 80%;
     }
     &::before {
         position: absolute;
@@ -66,15 +55,27 @@ $tag-border-frac: 0.7;
         box-shadow: inset 0 1.5px $grey-color;
         border-radius: $tag-hole-size;
     }
-    &::after {
+    & > svg {
         position: absolute;
-        content: '';
         top: 0;
-        right: calc(1px - #{$tag-right-pad}*#{$tag-border-frac});
-        background: #fff;
-        border-radius: 0px;
-        border-bottom: calc(#{$tag-height}/2.0) solid #f000;
-        border-top:    calc(#{$tag-height}/2.0) solid #f000;
-        border-left:   calc(#{$tag-right-pad}*#{$tag-border-frac}) solid $grey-color-light;
+        right: calc(-#{$tag-right-pad}*#{$tag-border-frac});
+        width: calc(#{$tag-right-pad}*#{$tag-border-frac});
+        height: $tag-height;
+        fill: $grey-color-light;
+    }
+}
+
+a.tag:hover {
+    text-decoration: none;
+    background-color: $brand-color;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    &::before {
+        box-shadow: inset 0 1.5px darken($brand-color, 15%);
+        transition: all 0.3s ease-in-out;
+    }
+    & > svg {
+        fill: $brand-color;
+        transition: all 0.3s ease-in-out;
     }
 }

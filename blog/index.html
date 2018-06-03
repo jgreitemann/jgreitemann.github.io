@@ -15,6 +15,14 @@ math-enabled: true
             <h1 class="post-title">{{ post.title }}</h1>
             <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
         </a>
+        <ul class="post-meta tags-list">
+            {% assign sorted_tags = post.tags | sort %}
+            {% for tag in sorted_tags %}
+            <li>
+                {% include tag.html %}
+            </li>
+            {% endfor %}
+        </ul>
     </header>
 
     <article class="post-content">

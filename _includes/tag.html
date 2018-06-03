@@ -1,0 +1,2 @@
+{% assign tg = tag | default: include.tag %}
+<a class="tag" href="{{ site.baseurl }}{% link blog/tags.html %}#{{ tg }}"><span>{{ tg }}</span>{% include tag_tip.svg %}</a>

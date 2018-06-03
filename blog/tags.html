@@ -12,7 +12,12 @@ title: tags
 
 <ul>
     {% for tag in all_tags %}
-    <li id="{{ tag }}">{{ tag }}</li>
+    <li id="{{ tag }}">
+        <h2 class="tag">
+            <span>{{ tag }}</span>
+            {% include tag_tip.svg %}
+        </h2>
+    </li>
     {% include post_list.html tag=tag %}
     {% endfor %}
 </ul>

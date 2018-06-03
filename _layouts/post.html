@@ -10,7 +10,7 @@ layout: default
         {% assign sorted_tags = page.tags | sort %}
         {% for tag in sorted_tags %}
         <li>
-            <a class="tag" href="{{ site.baseurl }}{% link blog/tags.html %}#{{ tag }}">{{ tag }}</a>
+            {% include tag.html %}
         </li>
         {% endfor %}
     </ul>
