@@ -10,3 +10,13 @@ svg {
         fill: lighten($brand-color, 15%);
     }
 }
+
+svg .grey {
+    fill: $grey-color;
+    .darker {
+        fill: $grey-color-dark;
+    }
+    .lighter {
+        fill: $grey-color-light;
+    }
+}
