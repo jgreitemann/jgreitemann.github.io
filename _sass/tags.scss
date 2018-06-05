@@ -1,34 +1,5 @@
 @charset "utf-8";
 
-ul.tags-list {
-    list-style: none;
-    color: $grey-color;
-    margin: 0;
-    & > li {
-        display: inline-block;
-        margin: 0.1em;
-        vertical-align: middle;
-        &:not(:last-child)::after {
-            content: ',';
-        }
-    }
-    &::before {
-        content: 'tags:';
-        padding-left: 1.2em;
-        background-image: url(/assets/svg/tags.svg);
-        background-position: left center;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-}
-
-$tag-hole-size: 0.4em;
-$tag-left-pad: 1.2em;
-$tag-right-pad: 1em;
-$tag-height: 1.4em;
-$tag-baseline-shift: 0.0em;
-$tag-border-frac: 0.7;
-
 .tag, a.tag:visited {
     display: inline-block;
     position: relative;
@@ -77,5 +48,129 @@ a.tag:hover {
     & > svg {
         fill: $brand-color;
         transition: all 0.3s ease-in-out;
+    }
+}
+
+ul.tags-list {
+    list-style: none;
+    color: $grey-color;
+    margin: 0;
+    & > li {
+        display: inline-block;
+        margin: 0.1em;
+        vertical-align: middle;
+        &:not(:last-child)::after {
+            content: ',';
+        }
+    }
+    &::before {
+        content: 'tags:';
+        padding-left: 1.2em;
+        background-image: url(/assets/svg/tags.svg);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.wrapper.no-pad {
+    padding-top: 0;
+}
+
+#all {
+    padding-top: $spacing-unit/2;
+}
+
+#all-tags-list {
+    &::before {
+        content: 'all tags:';
+    }
+
+    padding-bottom: $spacing-unit/2;
+}
+
+#tag-posts {
+    list-style-position: inside;
+    list-style-type: none;
+    margin-left: 0;
+
+    & > li {
+        display: none;
+
+        & .sticky {
+            position: sticky;
+            top: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #fffc;
+            border-bottom: 1px solid $grey-color-light;
+            z-index: 2;
+
+            & .cancel {
+                display: none;
+            }
+        }
+        & .tag {
+            font-size: 120%;
+            margin-bottom: 0;
+        }
+
+        #all:target + & {
+            display: unset;
+        }
+
+        &:target {
+            display: block;
+            position: absolute;
+            left: $spacing-unit/2;
+            right: $spacing-unit/2;
+            min-height: 100%;
+
+            & .sticky {
+                position: inline;
+
+                & > .tag {
+                    background-color: $filter-color;
+                    color: white;
+                    &::before {
+                        box-shadow: inset 0 1.5px $filter-color-dark;
+                    }
+                    & > svg {
+                        fill: $filter-color;
+                    }
+                }
+
+                &::before {
+                    content: 'filter: ';
+                    color: $filter-color;
+                    padding-left: 1.2em;
+                    background-image: url(/assets/svg/filter.svg);
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+                & .cancel {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 16px;
+                    height: 16px;
+                    position: relative;
+                    & > svg {
+                        position: absolute;
+                        fill: $filter-color;
+                        width: 100%;
+                        height: 100%;
+                        &:hover {
+                            fill: $filter-color-dark;
+                        }
+                    }
+                }
+            }
+        }
+
+        & ul {
+            margin: 0 0 0 30px;
+        }
     }
 }

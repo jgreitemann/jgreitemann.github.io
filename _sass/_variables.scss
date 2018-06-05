@@ -44,3 +44,15 @@ $on-laptop:        700px;
 // $to:    #F3286D;
 $from:  #1d81a2;
 $to:    #7e4aa2;
+
+// Tags
+$tag-hole-size: 0.4em;
+$tag-left-pad: 1.2em;
+$tag-right-pad: 1em;
+$tag-height: 1.4em;
+$tag-baseline-shift: 0.0em;
+$tag-border-frac: 0.7;
+
+/* $filter-color: #5789e1; */
+$filter-color: #6fa3c5;
+$filter-color-dark: darken($filter-color, 25%);

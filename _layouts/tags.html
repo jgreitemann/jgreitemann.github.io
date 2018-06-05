@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+    {% include head.html %}
+    <body>
+
+        {% include header.html %}
+        <div class="wrapper no-pad">
+            <div class="page-content">
+                {{ content }}
+            </div>
+        </div>
+
+        <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+        <script type="text/javascript">
+         var el = document.querySelector(".header-container");
+         var headroom  = new Headroom(el, {
+             "offset": 205,
+             "tolerance": 5
+         });
+         headroom.init();
+        </script>
+    </body>
+</html>

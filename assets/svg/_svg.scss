@@ -20,3 +20,10 @@ svg .grey {
         fill: $grey-color-light;
     }
 }
+
+svg .filter {
+    fill: $filter-color;
+    .darker {
+        fill: $filter-color-dark;
+    }
+}

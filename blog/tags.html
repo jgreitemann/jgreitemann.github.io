@@ -1,23 +1,37 @@
 ---
-layout: default
+layout: tags
 title: tags
 ---
-
-<h1>tags</h1>
 
 {% for post in site.posts %}
 {% assign all_tags = all_tags | concat: post.tags | uniq %}
 {% endfor %}
 {% assign all_tags = all_tags | sort %}
 
-<ul>
+<div id="all">
+    <ul id="all-tags-list" class="tags-list">
+        {% for tag in all_tags %}
+        <li>
+            {% include tag.html %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<ul id="tag-posts">
     {% for tag in all_tags %}
     <li id="{{ tag }}">
-        <h2 class="tag">
-            <span>{{ tag }}</span>
-            {% include tag_tip.svg %}
-        </h2>
+        <div class="sticky">
+            <h2 class="tag">
+                <span>{{ tag }}</span>
+                {% include tag_tip.svg %}
+            </h2>
+            <a class="cancel" href="#all">
+                {% include cancel.svg %}
+            </a>
+        </div>
+        {% include post_list.html tag=tag %}
+        <hr />
     </li>
-    {% include post_list.html tag=tag %}
     {% endfor %}
 </ul>
