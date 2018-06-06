@@ -116,7 +116,7 @@ ul.tags-list {
         }
 
         #all:target + & {
-            display: unset;
+            display: block;
         }
 
         &:target {
