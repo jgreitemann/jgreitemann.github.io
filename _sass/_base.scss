@@ -231,7 +231,7 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: 600px;
+    max-width: $content-width;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 25px;
@@ -250,8 +250,7 @@ pre {
     padding-left: 0px;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        max-width: $content-width + $spacing-unit;
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }

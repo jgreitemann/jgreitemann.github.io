@@ -122,9 +122,13 @@ ul.tags-list {
         &:target {
             display: block;
             position: absolute;
-            left: $spacing-unit/2;
-            right: $spacing-unit/2;
             min-height: 100%;
+            width: $content-width;
+            @include media-query($on-laptop) {
+                width: unset;
+                left:  $spacing-unit / 2;
+                right: $spacing-unit / 2;
+            }
 
             & .sticky {
                 position: inline;

@@ -27,8 +27,8 @@ $header-height: 64px;
 // Width of the content area
 $content-width:    700px;
 
-$on-palm:          600px;
-$on-laptop:        700px;
+// $on-palm:          600px;
+$on-laptop:        $content-width + $spacing-unit;
 
 // Gradient colours
 // $from:  #AD76F2;
