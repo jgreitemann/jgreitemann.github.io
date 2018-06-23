@@ -1,29 +1,29 @@
 @charset "utf-8";
 @import "variables";
 
-svg {
+svg .brand {
     fill: $brand-color;
-    .darker {
+    &.darker {
         fill: darken($brand-color, 15%);
     }
-    .lighter {
+    &.lighter {
         fill: lighten($brand-color, 15%);
     }
 }
 
 svg .grey {
     fill: $grey-color;
-    .darker {
+    &.darker {
         fill: $grey-color-dark;
     }
-    .lighter {
+    &.lighter {
         fill: $grey-color-light;
     }
 }
 
 svg .filter {
     fill: $filter-color;
-    .darker {
+    &.darker {
         fill: $filter-color-dark;
     }
 }

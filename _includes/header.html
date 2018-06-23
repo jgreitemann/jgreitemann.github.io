@@ -11,8 +11,12 @@
                 {% if entry.order %}
                 {% if entry.title %}
                 <a class="page-link{% if page.title == entry.title %} selected{% endif %}"
-                   href="{{ entry.url | prepend: site.baseurl }}">
+                   href="{{ entry.url | prepend: site.baseurl | append: entry.default-anchor }}">
+                    {% if entry.nav-icon %}
+                    {% include {{ entry.nav-icon }} %}
+                    {% else %}
                     <span>{{ entry.title }}</span>
+                    {% endif %}
                 </a>
                 {% endif %}
                 {% endif %}
