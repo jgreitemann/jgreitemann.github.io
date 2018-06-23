@@ -11,7 +11,7 @@
     <a href="{{ post.url | prepend: site.baseurl }}">
     <aside class="dates">{{ post.date | date: "%b %-d" }}</aside>
     </a>
-    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} <h2>{{ post.description }}</h2></a>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} <h2>{{ post.excerpt }}</h2></a>
   </li>
   {% assign post_limit = post_limit | minus: 1 %}
   {% if post_limit == 0 %}
