@@ -2,6 +2,7 @@
 
 %ext-link {
     display: inline-block;
+    position: relative;
     fill: $ext-link-color;
     font: 600 18px/1.8 $base-font-family;
     color: $ext-link-color;
@@ -15,7 +16,7 @@
 
     &::before {
         content: "";
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 0;
         width: 100%;
