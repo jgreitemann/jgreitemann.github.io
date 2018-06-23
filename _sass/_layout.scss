@@ -133,11 +133,12 @@ nav.site-nav {
         text-decoration: none;
 
         // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-            @include media-query($on-laptop) {
-                margin-left: 10px;
-            }
+        padding: 0 $nav-sep / 2;
+        @include media-query($on-laptop) {
+            padding: 0 $nav-sep-laptop / 2;
+        }
+        &:first-child {
+            padding-left: 0;
         }
 
         &.selected > span {
