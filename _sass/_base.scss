@@ -77,12 +77,23 @@ img {
 /**
  * Figures
  */
-figure > img {
-    display: block;
-}
+figure {
 
-figcaption {
-    font-size: $small-font-size;
+    margin: 1em 0 1.5em;
+
+    & > img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    & figcaption {
+        margin-top: 1em;
+        text-align: center;
+        color: $grey-color;
+        font-family: serif;
+        font-size: $caption-font-size;
+        font-style: italic;
+    }
 }
 
 
