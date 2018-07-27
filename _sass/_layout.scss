@@ -457,8 +457,9 @@ ul.anchors {
 
     position: fixed;
     top: 40px;
-    left: 0;
+    left: calc((100% - #{$content-width})/2 - 50px);
     bottom: 0;
+    max-height: 250px;
     flex-flow: column nowrap;
 
     @include media-query($on-laptop+2*24px+$spacing-unit) {
