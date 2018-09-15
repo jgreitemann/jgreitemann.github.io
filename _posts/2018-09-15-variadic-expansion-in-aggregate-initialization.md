@@ -15,7 +15,7 @@ types such as `std::array` without prior default initialization of their fields.
 #### The problem
 
 Suppose you have a class `foo` which is not default-constructible, or whose
-default constructor incurs significant and unnecessarg overhead (heap allocation,
+default constructor incurs significant and unnecessary overhead (heap allocation,
 thread synchronization, etc.). For the sake of this post, `foo` will just wrap
 an integer and its custom constructor will define the implicitly declared
 default constructor [as deleted][3].
@@ -41,7 +41,7 @@ for (int i = 0; i < arr.size(); ++i)
 {% endhighlight %}
 
 As an aside, we could simply write `arr[i] = i`; the integer would implicitly be
-converted to an object of type `i`.
+converted to an object of type `foo`.
 
 This, however, will fail to compile, with the compiler complaining about the use
 of the deleted default constructor `foo::foo()`. Another (inequivalent!)
@@ -105,8 +105,8 @@ to check for this artificial edge case. In other words, by adding meaningless
 default states for mere technical reasons, we erode the internal guarantees
 imposed by the type system.
 
-Even worse, if `foo` is a view of sorts, it likely has a reference members and
-references cannot be default-initialized or reassign. The obvious way out of
+Even worse, if `foo` is a view of sorts, it likely has reference members and
+references cannot be default-initialized or reassigned. The obvious way out of
 that situation is to replace the reference by a pointer to the parent of the
 view. Whenever you feel like that's the way to fix a problem, it might be time
 to step back and reevaluate. C++ ain't Rust and references are far from safe
@@ -243,7 +243,7 @@ closer to a solution. The final piece of the puzzle is an innocent-looking type
 alias provided by the standard library:
 
 {% highlight cpp %}
-template<class T, T N>
+template <typename T, T N>
 using make_integer_sequence =
     std::integer_sequence<T, /* a sequence 0, 1, 2, ..., N-1 */ >;
 {% endhighlight %}
@@ -251,8 +251,8 @@ using make_integer_sequence =
 Despite its `make_*` name suggesting that it might create an `integer_sequence`
 object, `std::make_integer_sequence` is actually a type. Obviously, the above
 pseudo-definition is not valid C++, but it is not that hard to come up with a
-recursive definition that does the job. Again, all the instantiation of
-templates happens at compile time, so the use of recursion does not hurt the
+recursive definition that does the job. Again, all the instantiations of
+templates happen at compile time, so the use of recursion does not hurt the
 runtime performance.
 
 Using `std::make_integer_sequence`, we can finally eliminate the explicit
@@ -283,7 +283,7 @@ make use of recursion in `std::make_integer_sequence` to build up the sequence.
 
 The definition of the helper function has to go in the header as the template
 will need to be instantiated anew for every `N`. It's common to indicate that it is
-not meant to be used directly by the `_impl` prefix, or by placing it in an
+not meant to be used directly by the `_impl` suffix, or by placing it in an
 `impl::` or `detail::` namespace. If the exposed function is a class member, the
 helper can also be made private.
 
