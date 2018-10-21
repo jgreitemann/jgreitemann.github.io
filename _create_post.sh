@@ -15,7 +15,7 @@ filename=_posts/$(date --rfc-3339=date)-$(
     echo "date:   $(date --rfc-3339=seconds)"
     echo "tags:"
     echo "math-enabled: false"
-    echo "# description: \"\""
+    echo "# excerpt: \"\""
     echo "---"
 } > $filename
 
