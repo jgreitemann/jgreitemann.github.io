@@ -14,6 +14,11 @@ layout: default
         </li>
         {% endfor %}
     </ul>
+    {% if page.disclaimer %}
+    <p class="post-disclaimer">
+        {{ page.disclaimer }}
+    </p>
+    {% endif %}
   </header>
 
   <article class="post-content">
