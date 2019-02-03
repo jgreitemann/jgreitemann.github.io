@@ -6,7 +6,7 @@ tags:
   - c++
 math-enabled: false
 excerpt: "Don't use unions anymore. Variants offer type safety and better compiler diagnostics with less boilerplate. std::visit makes it easy to apply the visitor pattern without setting up intricate class hierarchies, while achieving data/algorithm separation."
-disclaimer: "This post covers the basics of variants and the visitor pattern in detail. It is meant as preparation for a [follow-up post](/2018/10/22/recursive-visitors-from-fixed-point-combinators) on some more creative uses of visitors."
+disclaimer: "This post covers the basics of variants and the visitor pattern in detail. It is meant as preparation for a [follow-up post](/2019/02/03/recursive-visitors-from-fixed-point-combinators) on some more creative uses of visitors."
 ---
 
 #### Variants vs. unions
@@ -18,7 +18,7 @@ parameter types. For example, objects of type
 {% highlight cpp %}
 using foo = std::variant<int, std::string>;
 {% endhighlight %}
-    
+
 can hold either an `int`, or a `std::string`. In plain old C, one would use a
 _union type_ in this situation:
 
