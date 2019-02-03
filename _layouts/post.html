@@ -15,9 +15,9 @@ layout: default
         {% endfor %}
     </ul>
     {% if page.disclaimer %}
-    <p class="post-disclaimer">
-        {{ page.disclaimer }}
-    </p>
+    <div class="post-disclaimer">
+        {{ page.disclaimer | markdownify }}
+    </div>
     {% endif %}
   </header>
 

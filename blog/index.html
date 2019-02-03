@@ -23,6 +23,11 @@ math-enabled: true
             </li>
             {% endfor %}
         </ul>
+        {% if post.disclaimer %}
+        <div class="post-disclaimer">
+            {{ post.disclaimer | markdownify }}
+        </div>
+        {% endif %}
     </header>
 
     <article class="post-content">
