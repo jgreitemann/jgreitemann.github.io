@@ -6,7 +6,7 @@ tags:
   - c++
   - functional
 math-enabled: true
-excerpt: "In this follow-up post, we demonstrate how concept from lambda calculus can benefit real code by using the Y combinator to define recursive lambda functions. This is particularly useful in the visitor pattern introduced in the previous post."
+excerpt: "In this follow-up post, we demonstrate how concepts from lambda calculus can benefit real code by using the Y combinator to define recursive lambda functions. This is particularly useful in the visitor pattern introduced in the previous post."
 disclaimer: "This post picks up where the previous one left off. [Go back](/2018/10/21/type-safety-variants-and-visitors) for an introduction to the visitor pattern for `std::variant`."
 ---
 
