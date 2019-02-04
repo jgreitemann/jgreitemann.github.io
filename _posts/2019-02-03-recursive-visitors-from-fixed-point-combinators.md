@@ -385,11 +385,10 @@ captures, we can write:
 
 {% highlight cpp %}
 auto g = [](auto f, int n) -> int {
-	if (n > 0) {
-		return n * f(n - 1);
-	} else {
-		return 1;
-	}
+    if (n > 0)
+        return n * f(n - 1);
+    else
+        return 1;
 };
 
 auto f = Y{g};
