@@ -5,6 +5,7 @@ date:   2019-08-30 15:43:40+02:00
 tags:
   - meta
   - physics
+  - thesis
 math-enabled: false
 excerpt: "Over the past few month, I have been busy finishing yet another SVM-related paper but also writing my PhD thesis which I am happy to have handed in last week."
 ---
@@ -16,7 +17,7 @@ As you do, I tried to shove as much of my research into it as possible and the f
 
 At the same time, August is the last month of my working at LMU and also marks the end of my full-time scientific career as I have decided not to seek out any post-doc positions. Rather, I'm now on the look out for attractive jobs in industry, as a software engineer or the like. While I am somewhat saddened to abandon physics in general, and our work on frustrated magnetism in particular, I'm all the more excited to face the new challenges which lay ahead.
 
-There's still a bit of "legacy work" to be done on the TK-SVM project. For one, I will update the [published code][2] to a new version containing additional tools developed during the analysis of the XYZ pyrochlore model for the recent preprint. I will also put out another blog post or two on a WebAssembly-based interactive browser version of the graph analysis.
+There's still a bit of "legacy work" to be done on the TK-SVM project. For one, I will update the [published code][2] to a new version containing additional tools developed during the analysis of the XXZ pyrochlore model for the recent preprint. I will also put out another blog post or two on a WebAssembly-based interactive browser version of the graph analysis.
 Finally, I'm going to publish some excerpts from the introduction of my thesis on this blog. The full thesis will also eventually be published somewhere on here after the defense.
 
 I might still be involved with some of the future research revolving around our TK-SVM method down the line in a less active capacity in my spare time. For now, I look forward to shifting my attention away from that and to gather experience in both new tech and as pertaining to the non-academic workplace.
