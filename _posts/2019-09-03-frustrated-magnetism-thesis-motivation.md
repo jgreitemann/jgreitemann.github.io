@@ -149,49 +149,49 @@ In that regard, the method went above and beyond expectations and reconstructed 
 		<a name="ref-1"></a>
 		<span class="pub-index">[1]</span>
 		<span markdown="1">
-J. D. Bernal and R. H. Fowler. _A Theory of Water and Ionic Solution, with Particular Reference to Hydrogen and Hydroxyl Ions._ [J. Chem. Phys. 1, 515–548][doi-1] (1933).
+J. D. Bernal and R. H. Fowler. _A Theory of Water and Ionic Solution, with Particular Reference to Hydrogen and Hydroxyl Ions._ [J. Chem. Phys. **1**, 515–548][doi-1] (1933).
 		</span>
 	</li>
 	<li class="unlinked">
 		<a name="ref-2"></a>
 		<span class="pub-index">[2]</span>
 		<span markdown="1">
-Linus Pauling. _The Structure and Entropy of Ice and of Other Crystals with Some Randomness of Atomic Arrangement._ [J. Am. Chem. Soc. 57, 2680–2684][doi-2] (1935).
+Linus Pauling. _The Structure and Entropy of Ice and of Other Crystals with Some Randomness of Atomic Arrangement._ [J. Am. Chem. Soc. **57**, 2680–2684][doi-2] (1935).
         </span>
 	</li>
 	<li class="unlinked">
 		<a name="ref-3"></a>
 		<span class="pub-index">[3]</span>
 		<span markdown="1">
-M. J. Harris, S. T. Bramwell, D. F. McMorrow, T. Zeiske, and K. W. Godfrey. _Geometrical Frustration in the Ferromagnetic Pyrochlore_ Ho₂Ti₂O₇. [Phys. Rev. Lett. 79, 2554–2557][doi-2] (1997).
+M. J. Harris, S. T. Bramwell, D. F. McMorrow, T. Zeiske, and K. W. Godfrey. _Geometrical Frustration in the Ferromagnetic Pyrochlore_ Ho₂Ti₂O₇. [Phys. Rev. Lett. **79**, 2554–2557][doi-2] (1997).
         </span>
 	</li>
     <li class="unlinked">
         <a name="ref-4"></a>
         <span class="pub-index">[4]</span>
         <span markdown="1">
-Steven T. Bramwell and Michel J. P. Gingras. _Spin Ice State in Frustrated Magnetic Pyrochlore Materials._ [Science 294, 1495–1501][doi-4] (2001).
+Steven T. Bramwell and Michel J. P. Gingras. _Spin Ice State in Frustrated Magnetic Pyrochlore Materials._ [Science **294**, 1495–1501][doi-4] (2001).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-5"></a>
         <span class="pub-index">[5]</span>
         <span markdown="1">
-Jason S. Gardner, Michel J. P. Gingras, and John E. Greedan. _Magnetic pyrochlore oxides._ [Rev. Mod. Phys. 82, 53–107][doi-5] (2010).
+Jason S. Gardner, Michel J. P. Gingras, and John E. Greedan. _Magnetic pyrochlore oxides._ [Rev. Mod. Phys. **82**, 53–107][doi-5] (2010).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-6"></a>
         <span class="pub-index">[6]</span>
         <span markdown="1">
-A. P. Ramirez, A. Hayashi, R. J. Cava, R. Siddharthan, and B. S. Shastry. _Zero-point entropy in 'spin ice'._ [Nature 399, 333–335][doi-6] ((1999).).
+A. P. Ramirez, A. Hayashi, R. J. Cava, R. Siddharthan, and B. S. Shastry. _Zero-point entropy in 'spin ice'._ [Nature **399**, 333–335][doi-6] ((1999).).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-7"></a>
         <span class="pub-index">[7]</span>
         <span markdown="1">
-Claudio Castelnovo, Roderich Moessner, and Shivaji L. Sondhi. _Magnetic monopoles in spin ice._ [Nature 451, 42–45][doi-7] (2008).
+Claudio Castelnovo, Roderich Moessner, and Shivaji L. Sondhi. _Magnetic monopoles in spin ice._ [Nature **451**, 42–45][doi-7] (2008).
         </span>
     </li>
     <li class="unlinked">
@@ -205,119 +205,119 @@ John T. Chalker. _Geometrically Frustrated Antiferromagnets: Statistical Mechani
         <a name="ref-9"></a>
         <span class="pub-index">[9]</span>
         <span markdown="1">
-Christopher L. Henley. _Power-law spin correlations in pyrochlore antiferromagnets._ [Phys. Rev. B 71, 014424][doi-9] (2005).
+Christopher L. Henley. _Power-law spin correlations in pyrochlore antiferromagnets._ [Phys. Rev. B **71**, 014424][doi-9] (2005).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-10"></a>
         <span class="pub-index">[10]</span>
         <span markdown="1">
-Christopher L. Henley. _The "Coulomb Phase" in Frustrated Systems._ [Annu. Rev. Condens. Matter Phys. 1, 179–210][doi-10] (2010).
+Christopher L. Henley. _The "Coulomb Phase" in Frustrated Systems._ [Annu. Rev. Condens. Matter Phys. **1**, 179–210][doi-10] (2010).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-11"></a>
         <span class="pub-index">[11]</span>
         <span markdown="1">
-T. Fennell, P. P. Deen, A. R. Wildes, K. Schmalzl, D. Prabhakaran, A. T. Boothroyd, R. J. Aldus, D. F. McMorrow, and S. T. Bramwell. _Magnetic Coulomb Phase in the Spin Ice_ Ho₂Ti₂O₇. [Science 326, 415–417][doi-11] (2009).
+T. Fennell, P. P. Deen, A. R. Wildes, K. Schmalzl, D. Prabhakaran, A. T. Boothroyd, R. J. Aldus, D. F. McMorrow, and S. T. Bramwell. _Magnetic Coulomb Phase in the Spin Ice_ Ho₂Ti₂O₇. [Science **326**, 415–417][doi-11] (2009).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-12"></a>
         <span class="pub-index">[12]</span>
         <span markdown="1">
-Ivan A. Ryzhkin. _Magnetic relaxation in rare-earth oxide pyrochlores._ [J. Exp. Theor. Phys. 101, 481–486][doi-12] (2005).
+Ivan A. Ryzhkin. _Magnetic relaxation in rare-earth oxide pyrochlores._ [J. Exp. Theor. Phys. **101**, 481–486][doi-12] (2005).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-13"></a>
         <span class="pub-index">[13]</span>
         <span markdown="1">
-Claudio Castelnovo, Roderich Moessner, and Shivaji L. Sondhi. _Spin Ice, Fractionalization, and Topological Order._ [Annu. Rev. Condens. Matter Phys. 3, 35–55][doi-13] (2012).
+Claudio Castelnovo, Roderich Moessner, and Shivaji L. Sondhi. _Spin Ice, Fractionalization, and Topological Order._ [Annu. Rev. Condens. Matter Phys. **3**, 35–55][doi-13] (2012).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-14"></a>
         <span class="pub-index">[14]</span>
         <span markdown="1">
-Ludovic D. C. Jaubert and Peter C. W. Holdsworth. _Signature of magnetic monopole and Dirac string dynamics in spin ice._ [Nat. Phys. 5, 258–261][doi-14] (2009).
+Ludovic D. C. Jaubert and Peter C. W. Holdsworth. _Signature of magnetic monopole and Dirac string dynamics in spin ice._ [Nat. Phys. **5**, 258–261][doi-14] (2009).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-15"></a>
         <span class="pub-index">[15]</span>
         <span markdown="1">
-D. J. P. Morris, D. A. Tennant, S. A. Grigera, B. Klemke, C. Castelnovo, R. Moessner, C. Czternasty, M. Meissner, K. C. Rule, J.-U. Hoffmann, K. Kiefer, S. Gerischer, D. Slobinsky, and R. S. Perry. _Dirac Strings and Magnetic Monopoles in the Spin Ice_ Dy₂Ti₂O₇. [Science 326, 411–414][doi-15] (2009).
+D. J. P. Morris, D. A. Tennant, S. A. Grigera, B. Klemke, C. Castelnovo, R. Moessner, C. Czternasty, M. Meissner, K. C. Rule, J.-U. Hoffmann, K. Kiefer, S. Gerischer, D. Slobinsky, and R. S. Perry. _Dirac Strings and Magnetic Monopoles in the Spin Ice_ Dy₂Ti₂O₇. [Science **326**, 411–414][doi-15] (2009).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-16"></a>
         <span class="pub-index">[16]</span>
         <span markdown="1">
-Sean R. Giblin, Steven T. Bramwell, Peter C. W. Holdsworth, Dharmalingam Prabhakaran, and Ian Terry. _Creation and measurement of long-lived magnetic monopole currents in spin ice._ [Nat. Phys. 7, 252–258][doi-16] (2011).
+Sean R. Giblin, Steven T. Bramwell, Peter C. W. Holdsworth, Dharmalingam Prabhakaran, and Ian Terry. _Creation and measurement of long-lived magnetic monopole currents in spin ice._ [Nat. Phys. **7**, 252–258][doi-16] (2011).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-17"></a>
         <span class="pub-index">[17]</span>
         <span markdown="1">
-Bruno Tomasello, Claudio Castelnovo, Roderich Moessner, and Jorge Quintanilla. _Correlated Quantum Tunneling of Monopoles in Spin Ice._ [Phys. Rev. Lett. 123, 067204][doi-17] (2019).
+Bruno Tomasello, Claudio Castelnovo, Roderich Moessner, and Jorge Quintanilla. _Correlated Quantum Tunneling of Monopoles in Spin Ice._ [Phys. Rev. Lett. **123**, 067204][doi-17] (2019).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-18"></a>
         <span class="pub-index">[18]</span>
         <span markdown="1">
-Yann Perrin, Benjamin Canals, and Nicolas Rougemaille. _Extensive degeneracy, Coulomb phase and magnetic monopoles in artificial square ice._ [Nature 540, 410–413][doi-18] (2016).
+Yann Perrin, Benjamin Canals, and Nicolas Rougemaille. _Extensive degeneracy, Coulomb phase and magnetic monopoles in artificial square ice._ [Nature **540**, 410–413][doi-18] (2016).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-19"></a>
         <span class="pub-index">[19]</span>
         <span markdown="1">
-H. Fukazawa, R. G. Melko, R. Higashinaka, Y. Maeno, and M. J. P. Gingras. _Magnetic anisotropy of the spin-ice compound_ Dy₂Ti₂O₇. [Phys. Rev. B 65, 054410][doi-19] (2002).
+H. Fukazawa, R. G. Melko, R. Higashinaka, Y. Maeno, and M. J. P. Gingras. _Magnetic anisotropy of the spin-ice compound_ Dy₂Ti₂O₇. [Phys. Rev. B **65**, 054410][doi-19] (2002).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-20"></a>
         <span class="pub-index">[20]</span>
         <span markdown="1">
-Leon Balents. _Spin liquids in frustrated magnets._ [Nature 464, 199–208][doi-20] (2010).
+Leon Balents. _Spin liquids in frustrated magnets._ [Nature **464**, 199–208][doi-20] (2010).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-21"></a>
         <span class="pub-index">[21]</span>
         <span markdown="1">
-G. Baskaran, Z. Zou, and P. W. Anderson. _The resonating valence bond state and high-T<sub>c</sub> superconductivity — A mean field theory._ [Solid State Commun. 63, 973–976][doi-21] (1987).
+G. Baskaran, Z. Zou, and P. W. Anderson. _The resonating valence bond state and high-T<sub>c</sub> superconductivity — A mean field theory._ [Solid State Commun. **63**, 973–976][doi-21] (1987).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-22"></a>
         <span class="pub-index">[22]</span>
         <span markdown="1">
-P. W. Anderson, G. Baskaran, Z. Zou, and T. Hsu. _Resonating-valence-bond theory of phase transitions and superconductivity in_ La₂CuO₄_-based compounds._ [Phys. Rev. Lett. 58, 2790–2793][doi-22] (1987).
+P. W. Anderson, G. Baskaran, Z. Zou, and T. Hsu. _Resonating-valence-bond theory of phase transitions and superconductivity in_ La₂CuO₄_-based compounds._ [Phys. Rev. Lett. **58**, 2790–2793][doi-22] (1987).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-23"></a>
         <span class="pub-index">[23]</span>
         <span markdown="1">
-G. Baskaran and P. W. Anderson. _Gauge theory of high-temperature superconductors and strongly correlated Fermi systems._ [Phys. Rev. B 37, 580–583][doi-23] (1988).
+G. Baskaran and P. W. Anderson. _Gauge theory of high-temperature superconductors and strongly correlated Fermi systems._ [Phys. Rev. B **37**, 580–583][doi-23] (1988).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-24"></a>
         <span class="pub-index">[24]</span>
         <span markdown="1">
-Lucile Savary and Leon Balents. _Quantum spin liquids: a review._ [Rep. Prog. Phys. 80, 016502][doi-24] (2017).
+Lucile Savary and Leon Balents. _Quantum spin liquids: a review._ [Rep. Prog. Phys. **80**, 016502][doi-24] (2017).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-25"></a>
         <span class="pub-index">[25]</span>
         <span markdown="1">
-Alexei Yu. Kitaev. _Fault-tolerant quantum computation by anyons._ [Ann. Phys. (N. Y.) 303, 2–30][doi-25] (2003).
+Alexei Yu. Kitaev. _Fault-tolerant quantum computation by anyons._ [Ann. Phys. (N. Y.) **303**, 2–30][doi-25] (2003).
         </span>
     </li>
     <li class="unlinked">
@@ -331,42 +331,42 @@ Alexei Kitaev and Chris Laumann. _Topological quantum phases and quantum computa
         <a name="ref-27"></a>
         <span class="pub-index">[27]</span>
         <span markdown="1">
-Yi Zhou, Kazushi Kanoda, and Tai-Kai Ng. _Quantum spin liquid states._ [Rev. Mod. Phys. 89, 025003][doi-27] (2017).
+Yi Zhou, Kazushi Kanoda, and Tai-Kai Ng. _Quantum spin liquid states._ [Rev. Mod. Phys. **89**, 025003][doi-27] (2017).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-28"></a>
         <span class="pub-index">[28]</span>
         <span markdown="1">
-Nic Shannon, Tsutomu Momoi, and Philippe Sindzingre. _Nematic Order in Square Lattice Frustrated Ferromagnets._ [Phys. Rev. Lett. 96, 027213][doi-28] (2006).
+Nic Shannon, Tsutomu Momoi, and Philippe Sindzingre. _Nematic Order in Square Lattice Frustrated Ferromagnets._ [Phys. Rev. Lett. **96**, 027213][doi-28] (2006).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-29"></a>
         <span class="pub-index">[29]</span>
         <span markdown="1">
-John A. Mydosh and Peter M. Oppeneer. Colloquium: _Hidden order, superconductivity, and magnetism: The unsolved case of_ URu₂Si₂. [Rev. Mod. Phys. 83, 1301–1322][doi-29] (2011).
+John A. Mydosh and Peter M. Oppeneer. Colloquium: _Hidden order, superconductivity, and magnetism: The unsolved case of_ URu₂Si₂. [Rev. Mod. Phys. **83**, 1301–1322][doi-29] (2011).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-30"></a>
         <span class="pub-index">[30]</span>
         <span markdown="1">
-Joseph A. M. Paddison, Henrik Jacobsen, Oleg A. Petrenko, Maria Teresa Fernández-Díaz, Pascale P. Deen, and Andrew L. Goodwin. _Hidden order in spin-liquid_ Gd₃Ga₅O₁₂. [Science 350, 179–181][doi-30] (2015).
+Joseph A. M. Paddison, Henrik Jacobsen, Oleg A. Petrenko, Maria Teresa Fernández-Díaz, Pascale P. Deen, and Andrew L. Goodwin. _Hidden order in spin-liquid_ Gd₃Ga₅O₁₂. [Science **350**, 179–181][doi-30] (2015).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-31"></a>
         <span class="pub-index">[31]</span>
         <span markdown="1">
-Yao-Dong Li, Xiaoqun Wang, and Gang Chen. _Hidden multipolar orders of dipole-octupole doublets on a triangular lattice._ [Phys. Rev. B 94, 201114][doi-31] (2016).
+Yao-Dong Li, Xiaoqun Wang, and Gang Chen. _Hidden multipolar orders of dipole-octupole doublets on a triangular lattice._ [Phys. Rev. B **94**, 201114][doi-31] (2016).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-32"></a>
         <span class="pub-index">[32]</span>
         <span markdown="1">
-H. Takatsu, S. Onoda, S. Kittaka, A. Kasahara, Y. Kono, T. Sakakibara, Y. Kato, B. Fåk, J. Ollivier, J. W. Lynn, T. Taniguchi, M. Wakita, and H. Kadowaki. _Quadrupole Order in the Frustrated Pyrochlore_ Tb<sub>2+x</sub>Ti<sub>2-x</sub>O<sub>7+y</sub>. [Phys. Rev. Lett. 116, 217201][doi-32] (2016).
+H. Takatsu, S. Onoda, S. Kittaka, A. Kasahara, Y. Kono, T. Sakakibara, Y. Kato, B. Fåk, J. Ollivier, J. W. Lynn, T. Taniguchi, M. Wakita, and H. Kadowaki. _Quadrupole Order in the Frustrated Pyrochlore_ Tb<sub>2+x</sub>Ti<sub>2-x</sub>O<sub>7+y</sub>. [Phys. Rev. Lett. **116**, 217201][doi-32] (2016).
         </span>
     </li>
     <li class="unlinked">
@@ -374,7 +374,7 @@ H. Takatsu, S. Onoda, S. Kittaka, A. Kasahara, Y. Kono, T. Sakakibara, Y. Kato, 
         <span class="pub-index">[33]</span>
         <span markdown="1">
 Qiang Luo, Shijie Hu, Bin Xi, Jize Zhao, and Xiaoqun Wang. _Ground-state phase diagram
-of an anisotropic spin-½ model on the triangular lattice._ [Phys. Rev. B 95, 165110][doi-33] (2017).
+of an anisotropic spin-½ model on the triangular lattice._ [Phys. Rev. B **95**, 165110][doi-33] (2017).
         </span>
     </li>
     <li class="unlinked">
@@ -395,77 +395,77 @@ Andrey V. Chubukov. _Fluctuations in spin nematics._ J. Phys.: Condens. Matter 2
         <a name="ref-36"></a>
         <span class="pub-index">[36]</span>
         <span markdown="1">
-Tsutomu Momoi, Philippe Sindzingre, and Nic Shannon. _Octupolar Order in the Multiple Spin Exchange Model on a Triangular Lattice._ [Phys. Rev. Lett. 97, 257204][doi-36] (2006).
+Tsutomu Momoi, Philippe Sindzingre, and Nic Shannon. _Octupolar Order in the Multiple Spin Exchange Model on a Triangular Lattice._ [Phys. Rev. Lett. **97**, 257204][doi-36] (2006).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-37"></a>
         <span class="pub-index">[37]</span>
         <span markdown="1">
-Tsutomu Momoi, Philippe Sindzingre, and Kenn Kubo. _Spin Nematic Order in Multiple-Spin Exchange Models on the Triangular Lattice._ [Phys. Rev. Lett. 108, 057206][doi-37] (2012).
+Tsutomu Momoi, Philippe Sindzingre, and Kenn Kubo. _Spin Nematic Order in Multiple-Spin Exchange Models on the Triangular Lattice._ [Phys. Rev. Lett. **108**, 057206][doi-37] (2012).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-38"></a>
         <span class="pub-index">[38]</span>
         <span markdown="1">
-Roderich Moessner and John T. Chalker. _Low-temperature properties of classical geometrically frustrated antiferromagnets._ [Phys. Rev. B 58, 12049–12062][doi-38] (1998).
+Roderich Moessner and John T. Chalker. _Low-temperature properties of classical geometrically frustrated antiferromagnets._ [Phys. Rev. B **58**, 12049–12062][doi-38] (1998).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-39"></a>
         <span class="pub-index">[39]</span>
         <span markdown="1">
-Andreas Läuchli, Frédéric Mila, and Karlo Penc. _Quadrupolar Phases of the S=1 Bilinear-Biquadratic Heisenberg Model on the Triangular Lattice._ [Phys. Rev. Lett. 97, 087205][doi-39] (2006).
+Andreas Läuchli, Frédéric Mila, and Karlo Penc. _Quadrupolar Phases of the S=1 Bilinear-Biquadratic Heisenberg Model on the Triangular Lattice._ [Phys. Rev. Lett. **97**, 087205][doi-39] (2006).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-40"></a>
         <span class="pub-index">[40]</span>
         <span markdown="1">
-Congjun Wu. _Orbital Ordering and Frustration of p-Band Mott Insulators._ [Phys. Rev. Lett. 100, 200406][doi-40] (2008).
+Congjun Wu. _Orbital Ordering and Frustration of p-Band Mott Insulators._ [Phys. Rev. Lett. **100**, 200406][doi-40] (2008).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-41"></a>
         <span class="pub-index">[41]</span>
         <span markdown="1">
-J. Yamaura, K. Ohgushi, H. Ohsumi, T. Hasegawa, I. Yamauchi, K. Sugimoto, S. Takeshita, A. Tokuda, M. Takata, M. Udagawa, M. Takigawa, H. Harima, T. Arima, and Z. Hiroi. _Tetrahedral Magnetic Order and the Metal-Insulator Transition in the Pyrochlore Lattice of_ Cd₂Os₂O₇. [Phys. Rev. Lett. 108, 247205][doi-41] (2012).
+J. Yamaura, K. Ohgushi, H. Ohsumi, T. Hasegawa, I. Yamauchi, K. Sugimoto, S. Takeshita, A. Tokuda, M. Takata, M. Udagawa, M. Takigawa, H. Harima, T. Arima, and Z. Hiroi. _Tetrahedral Magnetic Order and the Metal-Insulator Transition in the Pyrochlore Lattice of_ Cd₂Os₂O₇. [Phys. Rev. Lett. **108**, 247205][doi-41] (2012).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-42"></a>
         <span class="pub-index">[42]</span>
         <span markdown="1">
-M. Mourigal, M. Enderle, B. Fåk, R. K. Kremer, J. M. Law, A. Schneidewind, A. Hiess, and A. Prokofiev. _Evidence of a Bond-Nematic Phase in_ LiCuVO₄. [Phys. Rev. Lett. 109, 027203][doi-42] (2012).
+M. Mourigal, M. Enderle, B. Fåk, R. K. Kremer, J. M. Law, A. Schneidewind, A. Hiess, and A. Prokofiev. _Evidence of a Bond-Nematic Phase in_ LiCuVO₄. [Phys. Rev. Lett. **109**, 027203][doi-42] (2012).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-43"></a>
         <span class="pub-index">[43]</span>
         <span markdown="1">
-O. Janson, J. Richter, P. Sindzingre, and H. Rosner. _Coupled frustrated quantum spin-½ chains with orbital order in volborthite_ Cu₃V₂O₇(OH)₂ · 2H₂O. [Phys. Rev. B 82, 104434][doi-43] (2010).
+O. Janson, J. Richter, P. Sindzingre, and H. Rosner. _Coupled frustrated quantum spin-½ chains with orbital order in volborthite_ Cu₃V₂O₇(OH)₂ · 2H₂O. [Phys. Rev. B **82**, 104434][doi-43] (2010).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-44"></a>
         <span class="pub-index">[44]</span>
         <span markdown="1">
-R. Wawrzyńczak, Y. Tanaka, M. Yoshida, Y. Okamoto, P. Manuel, N. Casati, Z. Hiroi, M. Takigawa, and G. J. Nilsen. _Classical Spin Nematic Transition in_ LiGa<sub>0.95</sub>In<sub>0.05</sub>Cr<sub>4</sub>O<sub>8</sub>. [Phys. Rev. Lett. 119, 087201][doi-44] (2017).
+R. Wawrzyńczak, Y. Tanaka, M. Yoshida, Y. Okamoto, P. Manuel, N. Casati, Z. Hiroi, M. Takigawa, and G. J. Nilsen. _Classical Spin Nematic Transition in_ LiGa<sub>0.95</sub>In<sub>0.05</sub>Cr<sub>4</sub>O<sub>8</sub>. [Phys. Rev. Lett. **119**, 087201][doi-44] (2017).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-45"></a>
         <span class="pub-index">[45]</span>
         <span markdown="1">
-A. Orlova, E. L. Green, J. M. Law, D. I. Gorbunov, G. Chanda, S. Krämer, M. Horvatić, R. K. Kremer, J. Wosnitza, and G. L. J. A. Rikken. _Nuclear Magnetic Resonance Signature of the Spin-Nematic Phase in_ LiCuVO₄ _at High Magnetic Fields._ [Phys. Rev. Lett. 118, 247201][doi-45] (2017).
+A. Orlova, E. L. Green, J. M. Law, D. I. Gorbunov, G. Chanda, S. Krämer, M. Horvatić, R. K. Kremer, J. Wosnitza, and G. L. J. A. Rikken. _Nuclear Magnetic Resonance Signature of the Spin-Nematic Phase in_ LiCuVO₄ _at High Magnetic Fields._ [Phys. Rev. Lett. **118**, 247201][doi-45] (2017).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-46"></a>
         <span class="pub-index">[46]</span>
         <span markdown="1">
-Jacques Villain, R. Bidaux, J.-P. Carton, and R. Conte. _Order as an effect of disorder._ [J. Phys. France 41, 1263–1272][doi-46] (1980).
+Jacques Villain, R. Bidaux, J.-P. Carton, and R. Conte. _Order as an effect of disorder._ [J. Phys. France **41**, 1263–1272][doi-46] (1980).
         </span>
     </li>
     <li class="unlinked">
@@ -473,42 +473,42 @@ Jacques Villain, R. Bidaux, J.-P. Carton, and R. Conte. _Order as an effect of d
         <span class="pub-index">[47]</span>
         <span markdown="1">
 Doron Bergman, Jason Alicea, Emanuel Gull, Simon Trebst, and Leon Balents. _Order-by-disorder and spiral spin-liquid in frustrated diamond-lattice antiferromagnets._ [Nat. Phys.
-3, 487–491][doi-47] (2007).
+**3**, 487–491][doi-47] (2007).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-48"></a>
         <span class="pub-index">[48]</span>
         <span markdown="1">
-John T. Chalker, Peter C. W. Holdsworth, and E. F. Shender. _Hidden order in a frustrated system: Properties of the Heisenberg Kagomé antiferromagnet._ [Phys. Rev. Lett. 68, 855–858][doi-48] (1992).
+John T. Chalker, Peter C. W. Holdsworth, and E. F. Shender. _Hidden order in a frustrated system: Properties of the Heisenberg Kagomé antiferromagnet._ [Phys. Rev. Lett. **68**, 855–858][doi-48] (1992).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-49"></a>
         <span class="pub-index">[49]</span>
         <span markdown="1">
-I. Ritchey, P. Chandra, and P. Coleman. _Spin folding in the two-dimensional Heisenberg kagomé antiferromagnet._ [Phys. Rev. B 47, 15342–15345][doi-49] (1993).
+I. Ritchey, P. Chandra, and P. Coleman. _Spin folding in the two-dimensional Heisenberg kagomé antiferromagnet._ [Phys. Rev. B **47**, 15342–15345][doi-49] (1993).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-50"></a>
         <span class="pub-index">[50]</span>
         <span markdown="1">
-Michael E. Zhitomirsky. _Field-Induced Transitions in a Kagomé Antiferromagnet._ [Phys. Rev. Lett. 88, 057204][doi-50] (2002).
+Michael E. Zhitomirsky. _Field-Induced Transitions in a Kagomé Antiferromagnet._ [Phys. Rev. Lett. **88**, 057204][doi-50] (2002).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-51"></a>
         <span class="pub-index">[51]</span>
         <span markdown="1">
-Michael E. Zhitomirsky. _Octupolar ordering of classical kagome antiferromagnets in two and three dimensions._ [Phys. Rev. B 78, 094423][doi-51] (2008).
+Michael E. Zhitomirsky. _Octupolar ordering of classical kagome antiferromagnets in two and three dimensions._ [Phys. Rev. B **78**, 094423][doi-51] (2008).
         </span>
     </li>
     <li class="unlinked">
         <a name="ref-52"></a>
         <span class="pub-index">[52]</span>
         <span markdown="1">
-Mathieu Taillefumier, Owen Benton, Han Yan, L. D. C. Jaubert, and Nic Shannon. _Competing Spin Liquids and Hidden Spin-Nematic Order in Spin Ice with Frustrated Transverse Exchange._ [Phys. Rev. X 7, 041057][doi-52] (2017).
+Mathieu Taillefumier, Owen Benton, Han Yan, L. D. C. Jaubert, and Nic Shannon. _Competing Spin Liquids and Hidden Spin-Nematic Order in Spin Ice with Frustrated Transverse Exchange._ [Phys. Rev. X **7**, 041057][doi-52] (2017).
         </span>
     </li>
     <li class="unlinked">
@@ -516,7 +516,7 @@ Mathieu Taillefumier, Owen Benton, Han Yan, L. D. C. Jaubert, and Nic Shannon. _
         <span class="pub-index">[53]</span>
         <span markdown="1">
 Owen Benton, Ludovic D. C. Jaubert, Rajiv R. P. Singh, Jaan Oitmaa, and Nic Shannon. _Quantum Spin Ice with Frustrated Transverse Exchange: From a π-Flux Phase to a Nematic
-Quantum Spin Liquid._ [Phys. Rev. Lett. 121, 067201][doi-53] (2018).
+Quantum Spin Liquid._ [Phys. Rev. Lett. **121**, 067201][doi-53] (2018).
         </span>
     </li>
 </ul>
