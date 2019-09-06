@@ -1,0 +1,79 @@
+$timeline-split: 25%;
+$timeline-thickness: 2px;
+$timeline-fade: 35px;
+$timeline-spacing: 20px;
+$timeline-dot-size: 14px;
+
+div.timeline {
+	background: linear-gradient(to bottom, white 0%, rgba(0,0,0,0) calc(0% + #{$timeline-fade}), rgba(0,0,0,0) calc(100% - #{$timeline-fade}), white 100%),
+	linear-gradient(to right, white calc(#{$timeline-split} - #{$timeline-thickness} / 2), $brand-color calc(#{$timeline-split} - #{$timeline-thickness} / 2) calc(#{$timeline-split} + #{$timeline-thickness} / 2), white calc(#{$timeline-split} + #{$timeline-thickness} / 2));
+	@include media-query($on-palm) {
+		background: linear-gradient(to bottom, white 0%, rgba(0,0,0,0) calc(0% + #{$timeline-fade}), rgba(0,0,0,0) calc(100% - #{$timeline-fade}), white 100%),
+		linear-gradient(to right, white calc(#{$timeline-dot-size / 2} - #{$timeline-thickness} / 2), $brand-color calc(#{$timeline-dot-size / 2} - #{$timeline-thickness} / 2) calc(#{$timeline-dot-size / 2} + #{$timeline-thickness} / 2), white calc(#{$timeline-dot-size / 2} + #{$timeline-thickness} / 2));
+	}
+
+	& > section > h3 {
+		@include media-query($on-palm) {
+			margin-left: $timeline-spacing + $timeline-dot-size / 2;
+		}
+	}
+
+	& > section > section {
+		display: block;
+		position: relative;
+		/*width: calc(#{100% - $timeline-split} - #{$timeline-spacing});*/
+		width: 100%;
+		padding-left: calc(#{$timeline-spacing} + #{$timeline-split});
+		@include media-query($on-palm) {
+			padding-left: $timeline-spacing + $timeline-dot-size / 2;
+		}
+		& > h4 {
+			margin-bottom: 0;
+		}
+		& > h5 {
+			display: block;
+			position: absolute;
+			width: calc(#{$timeline-split} - #{$timeline-spacing});
+			left: 0%;
+			top: 3px;
+			margin-right: $timeline-spacing;
+			text-align: right;
+			font-weight: normal;
+			font-size: 90%;
+			@include media-query($on-palm) {
+				display: inline-block;
+				position: inherit;
+				width: auto;
+				top: 0px;
+				margin-right: 0px;
+				margin-bottom: 5px;
+	        }
+		}
+		& > h6 {
+			font-size: smaller;
+			font-weight: normal;
+			margin-bottom: 0px;
+		}
+		& > p {
+			font-size: smaller;
+			line-height: 1.2;
+			color: $grey-color-dark;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			left: calc(#{$timeline-split} - #{$timeline-dot-size / 2});
+			top: 8px;
+			vertical-align: top;
+			border: $timeline-thickness solid $brand-color;
+			border-radius: 50%;
+			background-color: white;
+			width: $timeline-dot-size;
+			height: $timeline-dot-size;
+	        @include media-query($on-palm) {
+	        	left: 0px;
+	        }
+		};
+	}
+}
