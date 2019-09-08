@@ -31,11 +31,8 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
   {% assign kalatex-enabled = page.math-enabled | default: site.math-enabled | default: false %}
-  {% assign jquery-required = kalatex-enabled %}
 
-  {% if jquery-required %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  {% endif %}
   {% if kalatex-enabled %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" crossorigin="anonymous"></script>
