@@ -3,6 +3,7 @@ $timeline-thickness: 2px;
 $timeline-fade: 35px;
 $timeline-spacing: 20px;
 $timeline-dot-size: 14px;
+$timeline-small-dot-size: 8px;
 
 .columns {
 	display: flex;
@@ -133,6 +134,62 @@ div.timeline {
 	        @include media-query($on-palm) {
 	        	left: 0px;
 	        }
-		};
+		}
+
+		&.award {
+			margin-bottom: 8px;
+			& > h4 {
+				width: max-content;
+				position: relative;
+				z-index: 0;
+				font-weight: normal;
+				font-size: 16px;
+				background-color: $grey-color-light;
+				color: $grey-color-dark;
+				padding-right: 0.5em;
+				border-radius: 0em 0.4em 0.4em 0em;
+				@include media-query($on-palm) {
+					float: left;
+					border-radius: 0;
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					z-index: -1;
+					width: 2 * ($timeline-spacing - $timeline-thickness);
+					height: 100%;
+					left: -($timeline-spacing - $timeline-thickness);
+					background-color: $grey-color-light;
+					border-radius: 50% 0% 0% 50%;
+				}
+			}
+			& > h5 {
+				top: 0px;
+				@include media-query($on-palm) {
+					vertical-align: top;
+					font-size: 16px;
+					background-color: $grey-color-light;
+					color: $grey-color-dark;
+					padding-right: 0.5em;
+					border-radius: 0em 0.4em 0.4em 0em;
+					&::before {
+						content: '(';
+					}
+					&::after {
+						content: ')';
+					}
+				}
+			}
+			&::after {
+				top: 9px;
+				left: calc(#{$timeline-split} - #{$timeline-small-dot-size / 2});
+				width: $timeline-small-dot-size;
+				height: $timeline-small-dot-size;
+				background-color: $brand-color;
+				@include media-query($on-palm) {
+					left: ($timeline-dot-size - $timeline-small-dot-size) / 2;
+				}
+			}
+		}
 	}
 }
