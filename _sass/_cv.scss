@@ -21,7 +21,7 @@ $timeline-dot-size: 14px;
 	width: max-content;
 	flex-grow: 0;
 	display: grid;
-	grid-template-columns: max-content max-content;
+	grid-template-columns: max-content 190px;
 	grid-gap: 5px;
 	margin-left: 25px;
 
@@ -36,6 +36,7 @@ $timeline-dot-size: 14px;
 		text-align: right;
 	}
 	& progress {
+		animation: progress-expand 1s ease-out;
 		height: 1.2em;
 		align-self: center;
 		background: white;
@@ -51,6 +52,15 @@ $timeline-dot-size: 14px;
 		&::-webkit-progress-bar {
 			background: white;
 		}
+	}
+}
+
+@keyframes progress-expand {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 100%;
 	}
 }
 
