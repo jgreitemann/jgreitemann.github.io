@@ -20,7 +20,7 @@ So much so that the properties of water, including its unusually high melting an
    url="/assets/img/WaterIce5.png"
    width="50%"
    class=""
-   caption="Figure 1: A configuration of five water molecules obeying the ice rules: each oxygen is covalently bond to two hydrogens and exactly one hydrogen sits between any two neighboring oxygens." %}
+   caption="Figure 1: A configuration of five water molecules obeying the ice rules: each oxygen is covalently bound to two hydrogens and exactly one hydrogen sits between any two neighboring oxygens." %}
 
 It is well known that the hydrogen atoms in $$\mathrm{H_2O}$$ span an angle of about $$104^\circ$$, slightly less than the $$109^\circ$$ corresponding to the unperturbed tetrahedral coordination of hybridized $$sp^3$$ orbitals of the central oxygen atom.
 This leads to a nonvanishing dipolar moment due to the partial charges induced by the larger electronegativity of oxygen as compared to hydrogen.
