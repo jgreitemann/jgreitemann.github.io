@@ -4,6 +4,56 @@ $timeline-fade: 35px;
 $timeline-spacing: 20px;
 $timeline-dot-size: 14px;
 
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+#motivation {
+	font-size: smaller;
+	width: 50%;
+	flex-grow: 1;
+}
+
+#skills {
+	width: max-content;
+	flex-grow: 0;
+	display: grid;
+	grid-template-columns: max-content max-content;
+	grid-gap: 5px;
+	margin-left: 25px;
+
+	h1, h2, h3, h4, h5, h6 {
+		grid-column: span 2;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	& label {
+		font-size: 90%;
+		text-align: right;
+	}
+	& progress {
+		height: 1.2em;
+		align-self: center;
+		background: white;
+		color: $brand-color;
+		border: 0px;
+		&::-moz-progress-bar {
+			background: $brand-color;
+		}
+		-webkit-progress-appearance: none;
+		&::-webkit-progress-value {
+			background: $brand-color;
+		}
+		&::-webkit-progress-bar {
+			background: white;
+		}
+	}
+}
+
 div.timeline {
 	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) calc(0% + #{$timeline-fade}), rgba(255,255,255,0) calc(100% - #{$timeline-fade}), rgba(255,255,255,1) 100%),
 	linear-gradient(to right, white calc(#{$timeline-split} - #{$timeline-thickness} / 2), $brand-color calc(#{$timeline-split} - #{$timeline-thickness} / 2) calc(#{$timeline-split} + #{$timeline-thickness} / 2), white calc(#{$timeline-split} + #{$timeline-thickness} / 2));
@@ -21,7 +71,6 @@ div.timeline {
 	& > section > section {
 		display: block;
 		position: relative;
-		/*width: calc(#{100% - $timeline-split} - #{$timeline-spacing});*/
 		width: 100%;
 		padding-left: calc(#{$timeline-spacing} + #{$timeline-split});
 		@include media-query($on-palm) {

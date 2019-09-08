@@ -10,6 +10,33 @@ order: 2
 
 <hr />
 
+<div class="columns">
+	<section id="motivation">
+		{% capture motivation %}{% include motivation.md %}{% endcapture %}
+		{{ motivation | markdownify }}
+	</section>
+	<section id="skills">
+		<h4>Skills</h4>
+		<label for="cpp-skill">C++</label>
+		<progress id="cpp-skill" value="100" max="100"></progress>
+		<label for="python-skill">Python</label>
+		<progress id="python-skill" value="80" max="100"></progress>
+		<label for="bash-skill">Bash</label>
+		<progress id="bash-skill" value="75" max="100"></progress>
+		<label for="rust-skill">Rust</label>
+		<progress id="rust-skill" value="85" max="100"></progress>
+		<label for="js-skill">Javascript</label>
+		<progress id="js-skill" value="40" max="100"></progress>
+		<label for="web-skill">HTML / CSS</label>
+		<progress id="web-skill" value="50" max="100"></progress>
+		<label for="objc-skill">Objective-C</label>
+		<progress id="objc-skill" value="60" max="100"></progress>
+		<label for="git-skill">Git</label>
+		<progress id="git-skill" value="90" max="100"></progress>
+	</section>
+</div>
+
+<hr />
 
 <div class="timeline">
 	<section>
