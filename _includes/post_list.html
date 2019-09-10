@@ -1,5 +1,10 @@
 {% assign post_limit = include.limit | default: 999 %}
 {% assign posts = include.posts | default: site.posts %}
+{% if include.show_year %}
+{% assign date_format = "%b %-d, '%y" %}
+{% else %}
+{% assign date_format = "%b %-d" %}
+{% endif %}
 <ul class="post-list">
 {% for post in posts %}
   {% if include.tag %}
@@ -10,7 +15,7 @@
   {% endif %}
   <li>
     <a href="{{ post.url | prepend: site.baseurl }}">
-    <aside class="dates">{{ post.date | date: "%b %-d" }}</aside>
+    <aside class="dates">{{ post.date | date: date_format }}</aside>
     </a>
     <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} <h2><p>{{ post.excerpt | strip_html }}</p></h2></a>
   </li>

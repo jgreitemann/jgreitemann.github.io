@@ -7,7 +7,7 @@ math-enabled: true
 
 <h1>blog</h1>
 
-{% include post_list.html posts=paginator.posts %}
+{% include post_list.html posts=paginator.posts show_year=true %}
 
 <div class="pagination">
     {% if paginator.previous_page %}
