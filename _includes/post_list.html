@@ -1,6 +1,7 @@
 {% assign post_limit = include.limit | default: 999 %}
+{% assign posts = include.posts | default: site.posts %}
 <ul class="post-list">
-{% for post in site.posts %}
+{% for post in posts %}
   {% if include.tag %}
   {% if post.tags contains include.tag %}
   {% else %}

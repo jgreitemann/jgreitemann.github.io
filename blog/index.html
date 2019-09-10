@@ -7,36 +7,7 @@ math-enabled: true
 
 <h1>blog</h1>
 
-{% for post in paginator.posts %}
-<div class="post">
-
-    <header class="post-header">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-            <h1 class="post-title">{{ post.title }}</h1>
-            <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
-        </a>
-        <ul class="post-meta tags-list">
-            {% assign sorted_tags = post.tags | sort %}
-            {% for tag in sorted_tags %}
-            <li>
-                {% include tag.html %}
-            </li>
-            {% endfor %}
-        </ul>
-        {% if post.disclaimer %}
-        <div class="post-disclaimer">
-            {{ post.disclaimer | markdownify }}
-        </div>
-        {% endif %}
-    </header>
-
-    <article class="post-content">
-        {{ post.content }}
-    </article>
-
-    <hr />
-</div>
-{% endfor %}
+{% include post_list.html posts=paginator.posts %}
 
 <div class="pagination">
     {% if paginator.previous_page %}
