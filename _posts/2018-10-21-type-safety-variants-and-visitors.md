@@ -31,7 +31,7 @@ union bar {
 
 A variable of type `bar` could hence be accessed as an `int` by using the `i`
 member and as a `std::string` by using `s`, implicitly performing an
-`reinterpret_cast` of the data. `reinterpret_cast`s are frowned upon, and
+`reinterpret_cast` of the data. [`reinterpret_cast`s are frowned upon][5], and
 rightly so, as they open the door to undefined behavior, and this extends to
 unions. It is up to the programmer to keep track of the realization that is
 used. For member types with non-trivial constructors or destructors (such as
@@ -209,3 +209,4 @@ achieving data/algorithm separation.
 [2]: https://en.cppreference.com/w/cpp/utility/variant
 [3]: https://en.cppreference.com/w/cpp/utility/variant/visit
 [4]: https://en.wikipedia.org/wiki/Virtual_method_table
+[5]: https://youtu.be/L06nbZXD2D0
