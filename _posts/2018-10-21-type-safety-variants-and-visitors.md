@@ -45,7 +45,7 @@ the sizeof the types: on a 64-bit machine `sizeof(bar)` is 32 bytes which is
 identical to `sizeof(std::string)`, the `int` alternative being significantly
 smaller at 4 bytes. In contrast, `sizeof(foo)` yields 40 bytes, where the
 additional 8 bytes are reserved for the index (or tag) which is itself a
-`std::size_t`. Thus, the variant knows which alternative it holds, let us test
+`std::size_t`. Thus, the variant knows which alternative it holds, lets us test
 against it, and provides safe constructors and destructors. It is still possible
 to attempt to access the wrong alternative, but this will be caught at run-time
 and an exception will be thrown.
@@ -164,13 +164,13 @@ memory locality compared to variants.
 
 Rather than relying on dynamic polymorphism, `std::variant` uses the visitor
 pattern to achieve the same thing with static polymorphism (i.e. generic
-programming). [`std::visit`][3] is called upon an arbitrary variant and a
+programming). [`std::visit`][3] is called on an arbitrary variant and a
 visitor functor which similarly provides overloads of the call operator (but is
 not derived from any interface). Internally, `std::visit` will use
 `holds_alternative` successively and call the visitor with a reference to its
 contents. This ensures that the visitor handles all alternatives of the variant,
 giving a hard compiler error should any overload be missing. The call of the
-visitor is dispatch statically, meaning no vtable lookups are necessary, the
+visitor is dispatched statically, meaning no vtable lookups are necessary, the
 function bodies can be inlined and branch prediction and vectorization can be used.
 
 The equivalent to the above example program, realized with variants, becomes

@@ -89,7 +89,7 @@ place of its (one-time) use. Another upside is the ability to capture variables
 from the local scope.
 
 The `visitor` template obviously needs to be defined only once. Its definition
-is simple enough to stuff it into some utility header. In case you a using (a
+is simple enough to stash it into some utility header. In case you a using (a
 fairly recent version of) Boost anyway, the new meta-programming library Boost
 Hana offers a definition called [`boost::hana::overload`][5] straight out of the
 box.
@@ -228,8 +228,8 @@ closed form.
 
 This makes a naive implementation through inheritance from lambdas impossible.
 Fortunately, the situation can be salvaged using a concept from theoretical
-computer science that has major implication for recursion in general: the fixed
-point combinator.
+computer science that has major implication for recursion in general: the
+fixed-point combinator.
 
 #### Lambda calculus
 
@@ -306,18 +306,18 @@ f(n) = g(f, n).
 $$
 
 If we omit the argument $$n$$ for a moment (through currying), this reduces to
-$$f = g(f)$$ and is called the _fixed-point equation_. Solutions for $$f$$ that
+$$f = g(f)$$ and is called a _fixed-point equation_. Solutions for $$f$$ that
 satisfy this equation are called fixed points since $$g$$ maps those to
 themselves. Thus, the factorial function $$f$$ is a fixed point of the helper
 function $$g$$.
 
 How does one find _a_ fixed point of a function? Turns out that within the
 limits of lambda calculus, one can construct a lambda function that maps
-functions to (one of) their fixed-point(s). Such a function is called a _fixed-
-point combinator_. One particular construction is the so-called _Y combinator_
-which was discovered by Haskell Curry (who already has a programming language
-and the Currying procedure named after him). The lambda expression for the Y
-combinator looks like this:
+functions to (one of) their fixed-point(s). Such a function is called a
+_fixed-point combinator_. One particular construction is the so-called
+_Y combinator_ which was discovered by Haskell Curry (who already has a
+programming language and the Currying procedure named after him). The lambda
+expression for the Y combinator looks like this:
 
 $$\mathsf{Y} = \lambda f \,.\, (\lambda x \,.\, f(x\ x))(\lambda x \,.\, f(x\ x)).$$
 
@@ -326,9 +326,9 @@ that it in fact works as advertized, we first apply it to some function $$g$$,
 
 $$\mathsf{Y}g = (\lambda x \,.\, g(x\ x))(\lambda x \,.\, g(x\ x)),$$
 
-where we just replaced the "independent variable" with the concrete function
-$$g$$ we're acting upon. We follow the same pattern in evaluating the right-
-hand-side: the first pair of parentheses defines a lambda function of $$x$$
+where we just replaced the "independent variable" $$f$$ with the concrete function
+$$g$$ we're acting upon. We follow the same pattern in evaluating the
+right-hand side: the first pair of parentheses defines a lambda function of $$x$$
 which is then _evaluated_ at the point given by the second pair of parentheses,
 $$\lambda x\,.\, g(x\ x)$$,
 
@@ -343,8 +343,8 @@ The fixed _point_ in this case is not a number, but a function (of $$n$$), but
 that is not a problem. (In fact, numbers _are_ functions in lambda calculus.)
 
 Thus, the Y combinator allows the introduction of recursion to lambda calculus
-without changing its axioms or explicitly introducing some sense of self-
-referentiality into the formalism. In fact, lambda calculus has been proven to
+without changing its axioms or explicitly introducing some sense of
+self-referentiality into the formalism. In fact, lambda calculus has been proven to
 be Turing complete, _i.e._ any program can be expressed as a lambda expression.
 To learn more, I recommend the videos on [lambda calculus][2] in general and the
 [Y combinator][3] in particular on the Computerphile Youtube channel.
@@ -452,7 +452,7 @@ the whole `visitor` is wrapped in a `Y` combinator.
 While the contents of this post are certainly a lot to take in, especially so if
 lambda calculus is new to you, the resulting solutions are quite simple to use
 and I've found myself using them loads since. It's a case where concepts from
-theoretical computer science can be applied in real code.
+theoretical computer science can be applied to real code.
 
 [1]: https://www.youtube.com/watch?v=EsUmnLgz8QY
 [2]: https://www.youtube.com/watch?v=eis11j_iGMs
