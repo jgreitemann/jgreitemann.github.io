@@ -15,16 +15,17 @@ nav-icon: home.svg
 <hr />
 <!-- End intro -->
 
+<!-- <h1>latest blog posts</h1> -->
+
+{% include post_list.html limit=3 %}
+
+<a class="more" href="{{ site.baseurl }}{% link blog/index.html %}">more &rarr;</a>
+<hr />
+<br />
+
 <h1>recent publications</h1>
 
 {% include publications.html limit=3 %}
 
 <a class="more" href="{{ site.baseurl }}{% link publications.html %}">more &rarr;</a>
-<hr />
-
-<h1>recent blog posts</h1>
-
-{% include post_list.html limit=5 %}
-
-<a class="more" href="{{ site.baseurl }}{% link blog/index.html %}">more &rarr;</a>
 <hr />
