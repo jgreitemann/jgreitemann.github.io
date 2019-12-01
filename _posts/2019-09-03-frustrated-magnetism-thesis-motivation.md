@@ -8,7 +8,7 @@ tags:
   - machine-learning
 math-enabled: true
 excerpt: "Frustration is ubiquitous in nature. This post explores its effects on magnetic systems, giving rise to spin liquid behavior and hidden multipolar spin order. Recognizing these phenomena is nontrivial and motivated the inception of a machine-learning scheme to do so automatically."
-disclaimer: "This post is adapted from the introduction of my PhD thesis. The full thesis will be made available in late October."
+disclaimer: "This post is adapted from the introduction of my PhD thesis. The full thesis is published [here](https://nbn-resolving.org/urn:nbn:de:bvb:19-250579)."
 ---
 
 #### From water to spin ice
