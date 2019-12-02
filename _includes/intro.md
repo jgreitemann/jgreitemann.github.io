@@ -1,4 +1,4 @@
 Jonas Greitemann
 ----------------
 
-I'm a physics graduate from RWTH Aachen and former PhD student at LMU Munich. I'm currently seeking employment as a software engineer in Munich.
+I'm a C++ software architect living and working in Munich. I hold a PhD in physics from LMU Munich and a Master's in physics from RWTH Aachen.
