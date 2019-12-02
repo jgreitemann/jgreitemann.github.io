@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Joining MVTec"
-date:   2019-11-21 16:57:28+01:00
+date:   2019-12-02 07:32:07+01:00
 tags:
   - meta
 math-enabled: false
