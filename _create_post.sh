@@ -1,8 +1,8 @@
 #!/bin/bash
 
-filename=_posts/$(date --rfc-3339=date)-$(
+filename=_posts/$(date "+%Y-%m-%d")-$(
     echo $1 \
-        | sed -r 's/\s/-/g' \
+        | sed -r 's/ /-/g' \
         | sed -r 's/[^-_[:alnum:]]//g' \
         | tr '[:upper:]' '[:lower:]' \
         | cut -c '1-50'
@@ -12,7 +12,7 @@ filename=_posts/$(date --rfc-3339=date)-$(
     echo ---
     echo "layout: post"
     echo "title:  \"${1}\""
-    echo "date:   $(date --rfc-3339=seconds)"
+    echo "date:   $(date "+%Y-%m-%d %T%z")"
     echo "tags:"
     echo "math-enabled: false"
     echo "# excerpt: \"\""

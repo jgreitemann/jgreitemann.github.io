@@ -9,9 +9,9 @@ fi
 
 titlename=$(basename $1 | sed -r 's/^[0-9]{4}-[0-9]{2}-[0-9]{2}-//g')
 
-filename=$(dirname $1)/$(date --rfc-3339=date)-$titlename
+filename=$(dirname $1)/$(date "+%Y-%m-%d")-$titlename
 
-sed -r "s/^date:.*\$/date:   $(date --rfc-3339=seconds)/g" $old_filename > $filename
+sed -r "s/^date:.*\$/date:   $(date "+%Y-%m-%d %T%z")/g" $old_filename > $filename
 
 echo "Updated '${filename}':"
 head $filename
