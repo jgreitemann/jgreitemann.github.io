@@ -9,12 +9,11 @@ math-enabled: false
 ---
 
 I had a chance to attend "C++ on Sea" in Folkestone this year. This write-up aims to give an overview of my personal
-highlights as well as some solid overview talks. I'll amend this post with link to the recordings as soon as they go up
-on Youtube (probably in a couple of months time).
+highlights as well as some solid overview talks.
 
 ## Highlights
 
-### Jason Turner: Making C++ fun, safe, and accessible
+### [Jason Turner: Making C++ fun, safe, and accessible][turner]
 
 Jason gave the closing plenary talk of the conference, dubbed "endnote", and this was announced as his "most interactive
 talk" yet which says a lot if you know his style. However, it started out perfectly silent with him putting up slides
@@ -28,7 +27,7 @@ things, and static analyzers will nudge you in the way of best practices. These 
 properly (as even our build systems have the wrong defaults) and Jason promoted his best-practice CMake starter projects
 on Github which come with full sanitizers and static analyzers running in CI on day one.
 
-### Daniela Engert: Contemporary C++
+### [Daniela Engert: Contemporary C++][engert]
 
 Daniela's talk was dominated largely by her scrolling through a toy project (which is already on her Github) which is a
 simple client/server architecture where the server reads GIFs from a directory and writes their frames to socket;
@@ -45,7 +44,7 @@ Daniela also showed off the use of `std::stop_source` for cooperative cancellati
 using `std::jthread`) to shut the server down cleanly, and generally wrapped all her dependencies in modules which
 re-export the bits she needed.
 
-### Jonathan Müller: Coroutines in C++ vs. Rust
+### [Jonathan Müller: Coroutines in C++ vs. Rust][mueller]
 
 I was looking forward to this talk ever since the programme was announced. Same as C++, Rust gained language support for
 coroutines (more commonly just referred to as "async/await") fairly recently and both languages went for a "stackless"
@@ -75,7 +74,7 @@ where working with async/await is common practice.
 
 ## Honourable mentions
 
-### Hana Dusíková: Lightning Updates
+### [Hana Dusíková: Lightning Updates][dusikova]
 
 Hana gave the opening keynote of the conference, presenting a soon-to-be-open-sourced library to manage update
 mechanisms with possibly complex update path graphs. This was an interesting case study in API design, showing off many
@@ -84,7 +83,7 @@ definitions which need frequent updates but shouldn't guzzle too much bandwidth.
 the updater can be customized to draw its update data from the filesystem, effectively turning her library into a simple
 VCS.
 
-### Andrew Soffer: How Hard Could It Be? Lessons Learned from Replacing int64 With int64_t.
+### [Andrew Soffer: How Hard Could It Be? Lessons Learned from Replacing int64 With int64_t.][soffer]
 
 Andrew gave an account of what it took to refactor Google's entire codebase to replace Google's own typedef `int64` with
 the standard `int64_t`. Even when only considering x86_64 Linux as the target architecture, this turned out much harder
@@ -96,7 +95,7 @@ The sheer size of Google's codebase (about 250 million lines) means that manual 
 he stressed the importance of automatic refactorings using clang-based tools and how an almost full unit test coverage
 is essential to confidently commit changes too large for any human to review.
 
-### Ólafur Waage: Sandbox Games — Using WebAssembly and C++ to make a simple game
+### [Ólafur Waage: Sandbox Games — Using WebAssembly and C++ to make a simple game][waage]
 
 It's been more than four years since I last worked with C++ compiled into WebAssembly using the Emscripten toolchain, so
 I was curious to see how the tooling improved, esp. given that Rust has been leading the way in terms of WASM support
@@ -111,13 +110,13 @@ portable plug-in infrastructures.
 
 ## Good overview talks
 
-### Anthony Williams: An introduction to multithreading in C++20
+### [Anthony Williams: An introduction to multithreading in C++20][williams]
 
 Anthony is responsible for many of the multithreading features in C++ and gave a good overview of latches, barriers,
 futures, mutexes, semaphores, and atomics — and why should reach for them in that order. He also explained how the
 cooperative cancellation API and `std::jthread` can help treat dedicated threads as value types.
 
-### Bryce Adelstein Lelbach: Standard Parallelism
+### [Bryce Adelstein Lelbach: Standard Parallelism][lelbach]
 
 Bryce gave an introduction into the "senders and receivers" proposal which will hopefully be accepted for C++26. If so,
 it will deliver on the final two "pillars" of standard parallelism, the first one being the C++ 17 `ExecutionPolicy`
@@ -128,7 +127,8 @@ certainly coming in C++23, and gave an outlook how it may tie into the various l
 
 Mateusz's talk went over all the new features that made it into C++23 so far. In particular, he spent quite a bit of
 time on "deducing this" which will reduce the amount of boilerplate code library authors will need to write and will
-make CRTP obsolete.
+make CRTP obsolete. _Update: Unfortunately, the video of this talk is not available on Youtube. There may have been a
+problem with the recording._
 
 ## Closing remarks
 
@@ -144,3 +144,12 @@ conference was.
    url="/assets/img/folkestone_beach.jpg"
    width="70%"
    caption="View from the conference venue, overlooking the English channel with the Frensh coastline on the horizon." %}
+
+[turner]: https://youtu.be/HlaoxhmThmk
+[engert]: https://youtu.be/J_1-Au2MX6Y
+[mueller]: https://youtu.be/yt-gueRNCTU
+[dusikova]: https://youtu.be/f5o42_bMidg
+[soffer]: https://youtu.be/NPHO3bhQ3G8
+[waage]: https://youtu.be/5dcqJF0pZk0
+[williams]: https://youtu.be/8mt076AtqYg
+[lelbach]: https://youtu.be/cCOABV97zfA
