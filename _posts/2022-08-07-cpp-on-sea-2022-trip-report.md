@@ -5,6 +5,7 @@ date:   2022-08-07 15:04:49+0200
 tags:
   - c++
   - wasm
+  - conference
 math-enabled: false
 ---
 
