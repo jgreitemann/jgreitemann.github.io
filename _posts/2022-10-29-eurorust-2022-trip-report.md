@@ -8,7 +8,7 @@ tags:
   - wasm
   - conference
 math-enabled: false
-# excerpt: ""
+excerpt: "This fall, I attended the first-ever EuroRust, the European offshoot of Rustfest, in Berlin. In this post, I’ve collected my impressions of some of the talks, grouped by their overarching topics."
 ---
 
 This fall, I attended the first-ever [EuroRust][eurorust], the European offshoot of Rustfest, in Berlin. The conference
