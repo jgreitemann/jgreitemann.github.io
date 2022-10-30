@@ -99,7 +99,7 @@ it until it fits comfortably on a single slide. That's exactly what [Stefan Baum
 "Trails, traits, and tribulations". While some of this is just the application of common sense and recognizing where the
 responsibility of one function ends and that of another starts, Stefan also had some advice specific to Rust, like using
 the ?-operator to focus the function on the happy path and how implementing standard library traits for your own types
-helps you idenfity those responsibilities and leads to more idiomatic code, meanwhile promoting code reuse, e.g. by
+helps you identify those responsibilities and leads to more idiomatic code, meanwhile promoting code reuse, e.g. by
 implementing `Display for Foo` instead of writing a function `print_foo`.
 
 [Rafael Epplée][epplee] gave an account of how he went about end-to-end testing a web backend, though I found that most
@@ -132,7 +132,7 @@ doors.
 The first day concluded with a panel discussion, moderated by the Rust Foundation's CEO, [Rebecca Rumbul][rumbul], with
 representatives from four companies which are using Rust. An interesting takeaway was that the market for Rust
 developers is still pretty much inverted from the labor market at large, both because Rust is popular with developers,
-but also because companies are still reluctant and careful to migrate project to (or start projects in) Rust. And when
+but also because companies are still reluctant and careful to migrate projects to (or start projects in) Rust. And when
 they do, they typically start with a small team of veteran engineers; few companies are willing to take the risk of
 trusting a new hire with a project using a technology they don't have experience with — that's one unknown too many.
 Thus, for folks who wish to use Rust professionally, the panel recommended to try to push for Rust at work when the
