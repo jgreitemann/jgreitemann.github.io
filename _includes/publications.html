@@ -1,6 +1,6 @@
 {% assign pub_limit = include.limit | default: 999 %}
 <ul id="references">
-    {% assign pubs = site.publications | sort: "arxiv" %}
+    {% assign pubs = site.publications | sort: "title" %}
     {% for pub in pubs reversed %}
     {% assign arxiv = pub.arxiv | default: pub.title %}
     {% assign ref = pub.journal-ref | default: "preprint" %}
