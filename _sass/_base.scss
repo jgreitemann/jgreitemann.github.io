@@ -247,7 +247,7 @@ code {
     white-space: pre-wrap;
     border-radius: 3px;
     background-color: #F5F5F5;
-    color: #AB50C6;
+    color: darken(desaturate(#AB50C6, 20), 15);
 }
 
 code {
