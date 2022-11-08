@@ -283,6 +283,19 @@ pre {
     }
 }
 
+figure.highlight + p > a[href^="https://godbolt.org/z/"] {
+    display: block;
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    background-image: url("/assets/svg/godbolt.svg");
+    background-size: contain;
+    position: relative;
+    float: right;
+    bottom: 52px;
+    right: 3px;
+}
+
 /**
  * Wrapper
  */
