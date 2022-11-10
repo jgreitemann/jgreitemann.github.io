@@ -286,7 +286,7 @@ pre {
     }
 }
 
-figure.highlight + p > a[href^="https://godbolt.org/z/"] {
+div.highlighter-rouge + p > a[href^="https://godbolt.org/z/"] {
     display: block;
     width: 32px;
     height: 32px;
