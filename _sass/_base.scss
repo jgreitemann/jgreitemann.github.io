@@ -292,7 +292,7 @@ figure.highlight + p > a[href^="https://godbolt.org/z/"] {
     background-size: contain;
     position: relative;
     float: right;
-    bottom: 52px;
+    margin-top: -52px;
     right: 3px;
 }
 
