@@ -244,6 +244,9 @@ pre,
 code {
     font-size: 17px;
     font-family: 'Menlo', 'Monaco', "Courier New", monospace;
+    font-variant-ligatures: none;
+    font-feature-settings: normal;
+    hyphens: none;
     white-space: pre-wrap;
     border-radius: 3px;
     background-color: #F5F5F5;
