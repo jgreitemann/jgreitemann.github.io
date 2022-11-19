@@ -7,6 +7,8 @@ tags:
   - algorithms
   - functional
 math-enabled: false
+permalink: pipe-assoc
+disclaimer: "Update: I'm going to present the contents of this post in a lightning talk at the MUC++ meetup. The slides are available [here](https://greitemann.dev/associative-ranges-slides)."
 ---
 
 Tina Ulbrich ([@\_Yulivee\_][tina-twitter]) recently gave her talk ["How to Rangify Your Code"][cpponsea-talk] at my
@@ -28,19 +30,19 @@ passed into a `mean` function. The resulting means for each of the sliding windo
 then showed how you'd go about doing the same with ranges:
 
 ```cpp
-constexpr auto mean(std::span<double const> s) -> double {
-  return std::reduce(s.begin(), s.end(), 0.) / s.size();
+constexpr auto mean(std::span<double const> rng) -> double {
+  return std::reduce(rng.begin(), rng.end(), 0.) / rng.size();
 }
 
-auto sliding_mean(std::span<double const> s)
+auto sliding_mean(std::span<double const> rng)
     -> std::vector<double>
 {
-  return s | std::views::slide(5)
-           | std::views::transform(mean)
-           | std::ranges::to<std::vector>();
+  return rng | std::views::slide(5)
+             | std::views::transform(mean)
+             | std::ranges::to<std::vector>();
 }
 ```
-[Godbolt](https://godbolt.org/z/GTqM6s4Ee)
+[Godbolt](https://godbolt.org/z/Kaf7W13Ka)
 
 The ranges-based implementation has several advantages over the loop-based one: The size of the window is easily
 changed; in fact, it could just be turned into a second parameter to the `sliding_mean` function. Additionally, the
@@ -55,11 +57,11 @@ requirement, `sliding_mean` turns into a lazy algorithm and its result can be fu
 window means to the nearest integer:
 
 ```cpp
-constexpr auto sliding_mean(std::span<double const> s)
+constexpr auto sliding_mean(std::span<double const> rng)
     -> std::ranges::random_access_range auto
 {
-  return s | std::views::slide(5)
-           | std::views::transform(mean);
+  return rng | std::views::slide(5)
+             | std::views::transform(mean);
 }
 
 auto round_to_int(double d) -> int {
@@ -73,7 +75,7 @@ int main() {
                      | std::views::transform(round_to_int));
 }
 ```
-[Godbolt](https://godbolt.org/z/jzcTdKc3P)
+[Godbolt](https://godbolt.org/z/rxPG956Go)
 
 I'm using the {fmt} library here which has the ability to format ranges directly. To be clear, this would've worked with
 the previous version as well but it would've meant that first the means are calculated and aggregated into a vector and
@@ -129,9 +131,12 @@ lambda:
 
 ```cpp
 inline constexpr auto mean =
-    [](std::ranges::input_range auto s) -> double {
-      auto c = s | std::views::common;
-      return std::reduce(c.begin(), c.end(), 0.) / s.size();
+    [](std::ranges::sized_range auto rng) -> double {
+      using std::ranges::begin;
+      using std::ranges::end;
+      using std::ranges::size;
+      auto c = rng | std::views::common;
+      return std::reduce(begin(c), end(c), 0.) / size(rng);
     };
 ```
 
@@ -148,7 +153,7 @@ fmt::print("{}\n", sliding_mean(std::views::iota(0, 30)
                                 | std::views::filter(is_even))
                    | std::views::transform(round_to_int));
 ```
-[Godbolt](https://godbolt.org/z/38r9rGjn7)
+[Godbolt](https://godbolt.org/z/MdYfW4W44)
 
 ### Composite range adaptors
 
@@ -187,7 +192,7 @@ struct sliding_mean_fn
 
 inline constexpr sliding_mean_fn sliding_mean;
 ```
-[Godbolt](https://godbolt.org/z/ecGa3Exqe)
+[Godbolt](https://godbolt.org/z/Ez3sG3MxM)
 
 That works and is honestly not that much boilerplate. There exists however a much simpler way of achieving the same
 effect which already works in C++20 (at least if you ignore that `slide` is C++23) and relies on the fact that the pipe
@@ -202,7 +207,7 @@ adaptor object directly!
 inline constexpr auto sliding_mean =
     std::views::slide(5) | std::views::transform(mean);
 ```
-[Godbolt](https://godbolt.org/z/T3Px7jKh9)
+[Godbolt](https://godbolt.org/z/n3MnxKT4K)
 
 That is almost embarrassingly simple. Composing range adaptors in this way is akin to _point-free programming_ in
 functional programming languages where functions are defined through composition and partial application ("currying") of
@@ -214,7 +219,7 @@ constexpr auto sliding_mean(std::size_t s) {
   return std::views::slide(s) | std::views::transform(mean);
 }
 ```
-[Godbolt](https://godbolt.org/z/n9M47K1fM)
+[Godbolt](https://godbolt.org/z/7T7Mx6osj)
 
 <!--
 ### Comparison to Rust's `Iterator` trait
