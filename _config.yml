@@ -5,7 +5,9 @@ title: Jonas Greitemann
 email: jgreitemann@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://greitemann.dev" # the base hostname & protocol for your site
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
 timezone: "Etc/UTC"
 
 twitter:

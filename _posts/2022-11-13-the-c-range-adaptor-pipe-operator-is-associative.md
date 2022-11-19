@@ -7,7 +7,8 @@ tags:
   - algorithms
   - functional
 math-enabled: false
-permalink: pipe-assoc
+redirect_from:
+  - pipe-assoc
 disclaimer: "Update: I'm going to present the contents of this post in a lightning talk at the MUC++ meetup. The slides are available [here](https://greitemann.dev/associative-ranges-slides)."
 ---
 
