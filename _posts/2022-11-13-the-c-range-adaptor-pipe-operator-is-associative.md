@@ -9,7 +9,7 @@ tags:
 math-enabled: false
 redirect_from:
   - pipe-assoc
-disclaimer: "Update: I'm going to present the contents of this post in a lightning talk at the MUC++ meetup. The slides are available [here](https://greitemann.dev/associative-ranges-slides)."
+disclaimer: "Update: I presented the contents of this post in a lightning talk at the MUC++ meetup. The slides are available [here](https://greitemann.dev/associative-ranges-slides)."
 ---
 
 Tina Ulbrich ([@\_Yulivee\_][tina-twitter]) recently gave her talk ["How to Rangify Your Code"][cpponsea-talk] at my
