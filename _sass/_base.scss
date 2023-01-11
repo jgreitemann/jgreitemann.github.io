@@ -290,6 +290,7 @@ div.highlighter-rouge + p > a[href^="https://godbolt.org/z/"] {
     display: block;
     width: 32px;
     height: 32px;
+    color: transparent;
     font-size: 0;
     background-image: url("/assets/svg/godbolt.svg");
     background-size: contain;
