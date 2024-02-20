@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://greitemann.dev/schemas/acquisition-sequence-v1.0.schema.json",
+  "title": "MVTec MERLIC Acquisition Sequence",
+  "description": "An acquisition sequence is part of an image source configuration and defines how the image sources of the respective configuration should be used for the image acquisition in MERLIC. It enables you to set up more complex configurations for the image acquisition including parameter changes, synchronization options, and delays. For example, you may define the acquisition of multiple images from a camera device with different parameter settings and use all of these images in the MVApp in the same iteration.",
+  "type": "object",
+  "properties": {
+    "Version": {
+      "description": "The file version used to describe the acquisition sequence. This must match the version of the schema.",
+      "const": "1.0"
+    },
+    "Lanes": {
+      "description": "An acquisition sequence is defined by an array of \"lanes\". A lane defines a sequence of \"actions\" for a specific image source. Thus, each image source is configured in its own lane in the acquisition sequence.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "DeviceType": {
+            "description": "Defines the type of the image source. Currently, it must always be set to \"ImageSource\".",
+            "const": "ImageSource"
+          },
+          "DeviceId": {
+            "description": "Defines the name of the image source for which the lane is configured.",
+            "type": "string",
+            "minLength": 1
+          },
+          "Actions": {
+            "description": "Defines the set of \"actions\" that are applied to the respective image source, for example, acquiring an image. The actions of a lane are executed sequentially one-by-one when the acquisition sequence is executed.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "Type",
+                "Attributes"
+              ],
+              "properties": {
+                "Type": {
+                  "description": "Defines the type of the action."
+                },
+                "Attributes": {
+                  "description": "Parameterizes the action. Required and optional attributes depend on the selected action type."
+                }
+              },
+              "oneOf": [
+                {
+                  "description": "This action can be used to set a parameter of a camera device.",
+                  "properties": {
+                    "Type": {
+                      "const": "SetParameter"
+                    },
+                    "Attributes": {
+                      "type": "object",
+                      "properties": {
+                        "ParameterName": {
+                          "description": "You can set the values for camera parameters as well as for MVTec EasyParams. For both types of parameters, the respective internal name of the parameter must be given here. The internal name is defined by the manufacturer and might differ from the display name which is shown in the \"Image Sources\" tab of the MERLIC RTE Setup. For example, the internal name of a camera parameter might have an additional prefix or it might be the same as the display name but without spaces. They correspond to the parameter names that are used by \"HALCON\" in the operators `get_framegrabber_param` and `set_framegrabber_param`. However, you can also get the internal name via the MERLIC RTE Setup.",
+                          "type": "string",
+                          "examples": [
+                            "[Consumer]exposure",
+                            "[Consumer]exposure_auto",
+                            "[Consumer]gain",
+                            "[Consumer]gain_auto",
+                            "[Consumer]trigger",
+                            "[Consumer]trigger_activation",
+                            "[Consumer]trigger_delay"
+                          ]
+                        },
+                        "ParameterValue": {
+                          "description": "The value to set for the parameter identified by \"ParameterName\". The value and type must be compatible with the constraints imposed by the camera, otherwise the new value may be rejected or altered by the camera.",
+                          "type": [
+                            "number",
+                            "string",
+                            "boolean"
+                          ]
+                        },
+                        "ExcludeFromRollback": {
+                          "description": "By default, the modified parameter is reset to its previous value after each execution of the sequence. This behavior can optionally be deactivated by setting Attribute \"ExcludeFromRollback\" to `true`. However, this option should be used with care because it might lead to unexpected camera configurations, especially when setting camera parameters with dependencies to other values and when using multiple acquisition sequences.",
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "ParameterName",
+                        "ParameterValue"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "description": "This action can be used to acquire an image from the image source. An error also occurs when using this action for non-streaming devices. It can only be used for regular camera devices.",
+                  "properties": {
+                    "Type": {
+                      "const": "AcquireImage"
+                    },
+                    "Attributes": {
+                      "type": "object",
+                      "properties": {
+                        "ImageName": {
+                          "description": "Defines the name of the image. The name must be unique within the acquisition sequence. It also represents the name that will be shown in the \"Image Source\" tool in the MVApp when selecting the image to be used in the MVApp. If you are configuring an acquisition sequence for an already existing MVApp, you have to keep in mind to either define the same name for the image as already set in the MVApp or to adjust the MVApp to the new name in the acquisition sequence. Otherwise, an error might occur.",
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "ImageName"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "description": "The lanes of different image sources are executed in parallel. This action can be used to synchronize the execution of two or more lanes. When the execution of a lane arrives at a barrier it waits until all other lanes have also arrived at their according barrier, that is, at the barrier with the same \"BarrierName\" attribute.",
+                  "properties": {
+                    "Type": {
+                      "const": "Barrier"
+                    },
+                    "Attributes": {
+                      "type": "object",
+                      "properties": {
+                        "BarrierName": {
+                          "description": "Identifies the barrier. The action will block the execution of the sequence lane until all of the occurrences of thusly named barriers in other lanes have also been reached.",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "BarrierName"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "description": "This action can be used to delay the execution of the lane for a specified duration.",
+                  "properties": {
+                    "Type": {
+                      "const": "Delay"
+                    },
+                    "Attributes": {
+                      "type": "object",
+                      "properties": {
+                        "Milliseconds": {
+                          "description": "The duration, in milliseconds, for which this action delays the execution of the lane.",
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "Milliseconds"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "DeviceType",
+          "DeviceId",
+          "Actions"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Version",
+    "Lanes"
+  ]
+}
